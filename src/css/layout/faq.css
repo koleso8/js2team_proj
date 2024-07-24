@@ -1,0 +1,35 @@
+.faq .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: none;
+}
+
+.faq-title {
+  color: var(--title);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+#ac-text {
+  color: var(--text2);
+}
+#ac-header {
+  color: var(--text);
+}
+
+#ac {
+  background-color: transparent;
+  border: none;
+}
+
+#ac .ac-trigger::after {
+  content: url('svg');
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+/* .ac.is-active > .ac-header .ac-trigger::after {
+  content: '';
+} */
