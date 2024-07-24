@@ -1,4 +1,13 @@
-/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -9,10 +18,7 @@ p {
   margin: 0;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
+ol,
 ul {
   margin: 0;
   padding: 0;
@@ -20,11 +26,18 @@ ul {
 }
 
 a {
+  font-family: inherit;
   color: currentColor;
   text-decoration: none;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
 }
 
