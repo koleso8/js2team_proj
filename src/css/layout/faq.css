@@ -1,7 +1,6 @@
 .faq .container {
   padding-top: 32px;
   padding-bottom: 32px;
-  border: none;
 }
 
 .faq-title {
@@ -10,26 +9,64 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--circle);
+  border-radius: 50%;
+
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.icon {
+  stroke: var(--text);
+  transition: all 800ms;
+  transform: rotate(-180deg);
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--circle);
+}
+
+#ac.is-active .icon {
+  transform: rotate(0deg);
+  transition: all 800ms;
 }
 
 #ac-text {
   color: var(--text2);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--font-family);
+  padding-left: 0;
 }
 #ac-header {
   color: var(--text);
+  padding: 20px 90px 20px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-family: var(--font-family);
 }
 
 #ac {
   background-color: transparent;
   border: none;
+  margin-top: 0;
 }
 
 #ac .ac-trigger::after {
-  content: url('svg');
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-}
-/* .ac.is-active > .ac-header .ac-trigger::after {
   content: '';
-} */
+}
