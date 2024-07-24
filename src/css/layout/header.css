@@ -55,3 +55,108 @@
   background-color: var(--background);
 }
 /* #endregion Burger button */
+
+.header {
+  padding-top: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.logo-img {
+  border-radius: 18px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+.mob-menu-btn {
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+.desk-menu-box {
+  display: flex;
+  width: 67px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.desk-menu-btn {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .desk-menu-btn {
+    display: flex;
+    width: 67px;
+    height: 39px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px; /*! Прибрати? */
+    text-decoration-line: underline;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+.desk-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .desk-menu {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+.desk-menu-item {
+}
+.order-btn {
+  display: none;
+  padding: 18px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background: #ed3b44;
+}
+@media screen and (min-width: 768px) {
+  .order-btn {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
