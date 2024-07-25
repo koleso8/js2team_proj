@@ -5,7 +5,7 @@ import{A as n,a as c,b as l}from"./assets/vendor-c4f2e476.js";(function(){const 
     ${s}
     <span class="circle">
     <svg class="icon" width="12" height="8">
-    <use href="svg/icons.svg#arrow-down"></use>
+    <use href="./svg/icons.svg#arrow-down"></use>
     </svg>
     </span>
     </button>
