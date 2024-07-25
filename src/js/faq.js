@@ -56,7 +56,6 @@ function listItemTemplay(item) {
     </li>
     `;
 }
-//<span class="line"></span>
 
 function listItemsTemplay(array) {
   return array.map(listItemTemplay).join('');
