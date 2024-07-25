@@ -17,7 +17,7 @@
 .theme-list {
   display: flex;
   gap: 15px;
-  position: absolute;
+  position: static;
   top: 0;
   left: 45%;
 }
