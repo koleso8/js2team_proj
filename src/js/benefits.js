@@ -52,17 +52,47 @@ function renderItems(array) {
 
 renderItems(benList);
 
-VANTA.NET({
-  el: '#animation-box',
+const effect = VANTA.NET({
   mouseControls: true,
   touchControls: true,
   gyroControls: true,
-  minHeight: 100,
+  minHeight: 200.0,
   minWidth: 200.0,
   scale: 1.0,
   scaleMobile: 1.0,
+  maxDistance: 25.0,
+  el: '#animation-box',
   color: 0xed3b44,
   backgroundColor: 0x1c1d20,
-  points: 17.0,
-  maxDistance: 25.0,
 });
+
+//*=====================chenge-theme
+const bgIcon = document.querySelectorAll('.bg-icon');
+console.log(bgIcon);
+const screenWidth = window.screen.width;
+// console.log(screenWidth);
+
+export function redAnimation() {
+  // bgIcon[0].classList.add('red');
+  // bgIcon[1].classList.add('red');
+  // bgIcon[2].classList.add('red');
+  // bgIcon[3].classList.add('red');
+  effect.setOptions({
+    color: 0xed3b44,
+  });
+}
+export function yellowAnimation() {
+  // bgIcon[0].classList.add('yellow');
+  // bgIcon[1].classList.add('yellow');
+  // bgIcon[2].classList.add('yellow');
+  // bgIcon[3].classList.add('yellow');
+  effect.setOptions({
+    color: 0xc6e327,
+  });
+}
+
+export function orangeAnimation() {
+  effect.setOptions({
+    color: 0xff7f08,
+  });
+}
