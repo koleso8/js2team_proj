@@ -16,7 +16,7 @@ const instance = basicLightbox.create(
     </p>
     <a href="" class="close"
       ><svg class="icon" width="22" height="22">
-        <use href="svg/icons.svg#close"></use>
+        <use href="images/svg/icons.svg#close"></use>
       </svg>
     </a>
   </div>
@@ -38,4 +38,6 @@ const instance = basicLightbox.create(
   },
 );
 
-// instance.show();
+export function success() {
+  return instance.show();
+}
