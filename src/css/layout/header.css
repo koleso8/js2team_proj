@@ -64,7 +64,13 @@
   width: 100%;
   z-index: 100;
   background: transparent;
+  transition: transform 0.3s ease-in-out;
 }
+
+.header.hidden {
+  transform: translateY(-100%); /* Ховає хедер за межі видимості */
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -104,23 +110,23 @@
 }
 .desk-menu-btn {
   display: none;
+  width: 67px;
+  height: 39px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.32px; /*! Прибрати? */
+  text-decoration-line: underline;
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
   .desk-menu-btn {
     display: flex;
-    width: 67px;
-    height: 39px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fafafa;
-    background: none;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.32px; /*! Прибрати? */
-    text-decoration-line: underline;
-    border: none;
   }
 }
 
@@ -137,6 +143,10 @@
 @media screen and (min-width: 768px) {
   .desk-menu {
     display: flex;
+    transition: opacity 0.8s ease;
+  }
+  .desk-menu:not(.visually-hidden) {
+    opacity: 1; /* Налаштуйте за потребою */
   }
 }
 
