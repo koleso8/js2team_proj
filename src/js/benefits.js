@@ -1,10 +1,12 @@
+import svg from '../images/svg/icons.svg';
+
 const refs = {
   listEl: document.querySelector('.benefits-list'),
 };
 
 const benList = [
   {
-    svg: 'images/svg/icons.svg#user',
+    svg: `${svg}#user`,
     title: 'Expertise',
     text: 'As a highly experienced developer, I have deep knowledge of programming and website development.',
   },
