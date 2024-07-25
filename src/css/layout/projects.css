@@ -172,6 +172,7 @@
   padding: 14px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.5);
 }
