@@ -41,9 +41,9 @@ function listItemTemplay(item) {
     <h3 class="ac-header">
     <button type="button" class="ac-trigger" id="ac-header">
     ${title}
-    <span class="circle">
-    <svg class="icon" width="12" height="8">
-    <use href="./svg/icons.svg#arrow-down"></use>
+    <span class="circle-faq">
+    <svg class="icon-faq " width="12" height="8">
+    <use href="../svg/icons.svg#arrow-down"></use>
     </svg>
     </span>
     </button>

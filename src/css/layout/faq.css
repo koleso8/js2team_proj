@@ -25,11 +25,12 @@
   margin-bottom: 32px;
 }
 
-.circle {
+.circle-faq {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--circle);
+  transition: var(--transition);
   border-radius: 50%;
 
   width: 34px;
@@ -38,16 +39,21 @@
   top: 20px;
   right: 0;
 }
+.circle-faq:hover,
+.circle-faq:focus {
+  border-color: var(--text);
+  transition: var(--transition);
+}
 
-.icon {
+.icon-faq {
   stroke: var(--text);
-  transition: all 800ms;
+  transition: var(--transition);
   transform: rotate(-180deg);
 }
 
-#ac.is-active .icon {
+#ac.is-active .icon-faq {
   transform: rotate(0deg);
-  transition: all 800ms;
+  transition: var(--transition);
 }
 
 #ac-text {
@@ -117,7 +123,7 @@
     border-right: 1px solid var(--circle);
   }
 
-  #ac:nth-child(odd) .circle {
+  #ac:nth-child(odd) .circle-faq {
     right: 32px;
   }
 }
