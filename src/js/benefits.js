@@ -11,17 +11,17 @@ const benList = [
     text: 'As a highly experienced developer, I have deep knowledge of programming and website development.',
   },
   {
-    svg: 'images/svg/icons.svg#message',
+    svg: `${svg}#message`,
     title: 'Communication',
     text: ' Understanding your needs and wants is my priority and I am always open to discussions and corrections.',
   },
   {
-    svg: 'images/svg/icons.svg#brush',
+    svg: `${svg}#brush`,
     title: 'Art',
     text: 'Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life. ',
   },
   {
-    svg: 'images/svg/icons.svg#hourglass',
+    svg: `${svg}#hourglass`,
     title: 'Urgent execution',
     text: 'I understand how important time is to you. Ready to work quickly and efficiently, without reducing the quality of work.',
   },
