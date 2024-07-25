@@ -43,7 +43,7 @@ function listItemTemplay(item) {
     ${title}
     <span class="circle-faq">
     <svg class="icon-faq " width="12" height="8">
-    <use href="../svg/icons.svg#arrowDown"></use>
+    <use href="./svg/icons.svg#arrowDown"></use>
     </svg>
     </span>
     </button>
