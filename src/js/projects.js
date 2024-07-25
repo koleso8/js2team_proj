@@ -55,8 +55,8 @@ const projectsList = [
 ];
 
 const markupEl = document.querySelector('.projects-cards');
-const navBtnPrev = document.querySelector('.projects-navigation-btn');
-const navBtnNext = document.querySelector('');
+const navBtnPrev = document.querySelector('.projects-navigation-prev');
+const navBtnNext = document.querySelector('.projects-navigation-next');
 
 function cardMarkupTemplate(arr) {
   return arr
@@ -118,18 +118,19 @@ function cardMarkupTemplate(arr) {
     .join('');
 }
 
-function renderProjectCart(arr) {
+function renderProjectCards(arr) {
   const markup = cardMarkupTemplate(arr);
   markupEl.innerHTML = markup;
 }
 
-renderProjectCart(projectsList);
+renderProjectCards(projectsList);
 
-const swiper = new Swiper('.projects-wrapper', {
+const swiper = new Swiper('.swiper-wrapper', {
   direction: 'horizontal',
   loop: true,
+  slidesPerGroup: 1,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-prev',
+    prevEl: '.swiper-button-next',
   },
 });
