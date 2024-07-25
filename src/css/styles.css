@@ -13,3 +13,22 @@
 @import url('./layout/reviews.css');
 @import url('./layout/work-together.css');
 @import url('./layout/modal.css');
+
+.theme-list {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+.theme-item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+/* .red {
+}
+.yellow {
+  background-color: yellow !important;
+  stroke: var(--background) !important;
+} */
