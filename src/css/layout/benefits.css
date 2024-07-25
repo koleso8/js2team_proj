@@ -74,6 +74,22 @@
   border-radius: 10px;
   background-color: var(--accent-color);
 }
+/* 
+.bg-icon .red {
+  background-color: var(--accent-color);
+}
+.bg-icon .red .icon-ben {
+  stroke: var(--text) !important;
+}
+.bg-icon .yellow {
+  background-color: yellow;
+}
+.bg-icon .yellow .icon-ben {
+  stroke: var(--background) !important;
+}
+.bg-icon .orange {
+  background-color: orange;
+} */
 
 .icon-ben {
   stroke: var(--text);
