@@ -1,5 +1,6 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
+import svg from '../images/svg/icons.svg';
 
 const frize = e => {
   window.scrollTo(0, 0);
@@ -16,12 +17,11 @@ const instance = basicLightbox.create(
     </p>
     <a href="" class="close"
       ><svg class="icon" width="22" height="22">
-        <use href="images/svg/icons.svg#close"></use>
+        <use href="${svg}#close"></use>
       </svg>
     </a>
   </div>
 </div>
-
 `,
   {
     onShow: instance => {
