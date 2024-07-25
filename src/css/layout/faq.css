@@ -1,7 +1,19 @@
 .faq .container {
   padding-top: 32px;
   padding-bottom: 32px;
-  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .faq .container {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
 }
 
 .faq-title {
@@ -10,26 +22,107 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.circle-faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--circle);
+  transition: var(--transition);
+  border-radius: 50%;
+
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.circle-faq:hover,
+.circle-faq:focus {
+  border-color: var(--text);
+  transition: var(--transition);
+}
+
+.icon-faq {
+  stroke: var(--text);
+  transition: var(--transition);
+}
+
+#ac.is-active .icon-faq {
+  transform: rotate(180deg);
+  transition: var(--transition);
 }
 
 #ac-text {
   color: var(--text2);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--font-family);
+  padding-left: 0;
+  padding-bottom: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  #ac-text {
+    padding-right: 48px;
+    padding-bottom: 24px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #ac:nth-child(even) {
+    padding-left: 32px;
+  }
+
+  #ac-text {
+    padding-bottom: 26px;
+  }
+}
+
 #ac-header {
   color: var(--text);
+  padding: 20px 90px 20px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-family: var(--font-family);
 }
 
 #ac {
   background-color: transparent;
   border: none;
+  margin-top: 0;
+  border-top: 1px solid var(--circle);
+}
+
+#ac:last-child {
+  border-bottom: 1px solid var(--circle);
 }
 
 #ac .ac-trigger::after {
-  content: url('svg');
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-}
-/* .ac.is-active > .ac-header .ac-trigger::after {
   content: '';
-} */
+}
+
+@media only screen and (min-width: 1440px) {
+  #accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 250px;
+    max-height: 584px;
+  }
+  #ac {
+    width: 50%;
+  }
+  #ac:nth-last-child(n) {
+    border-bottom: 1px solid var(--circle);
+  }
+  #ac:nth-child(odd) {
+    border-right: 1px solid var(--circle);
+  }
+
+  #ac:nth-child(odd) .circle-faq {
+    right: 32px;
+  }
+}
