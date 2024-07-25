@@ -4,22 +4,22 @@ const refs = {
 
 const benList = [
   {
-    svg: './svg/icons.svg#user',
+    svg: '../svg/icons.svg#user',
     title: 'Expertise',
     text: 'As a highly experienced developer, I have deep knowledge of programming and website development.',
   },
   {
-    svg: './svg/icons.svg#message',
+    svg: '../svg/icons.svg#message',
     title: 'Communication',
     text: ' Understanding your needs and wants is my priority and I am always open to discussions and corrections.',
   },
   {
-    svg: './svg/icons.svg#brush',
+    svg: '../svg/icons.svg#brush',
     title: 'Art',
     text: 'Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life. ',
   },
   {
-    svg: './svg/icons.svg#hourglass',
+    svg: '../svg/icons.svg#hourglass',
     title: 'Urgent execution',
     text: 'I understand how important time is to you. Ready to work quickly and efficiently, without reducing the quality of work.',
   },
