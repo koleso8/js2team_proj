@@ -1,0 +1,197 @@
+.about-me {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.about-wrapper {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-text-wrapper {
+  min-height: 500px;
+  background-color: var(--cards);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.about-main-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.about-accent-text {
+  color: var(--accent-color);
+}
+
+.about-grey-text {
+  color: var(--title);
+}
+
+.about-photo {
+  border-radius: 24px;
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+  .about-me {
+    padding-bottom: 48px;
+  }
+
+  .about-wrapper {
+    margin-bottom: 64px;
+  }
+
+  .about-text-wrapper {
+    min-height: 700px;
+    padding: 64px;
+  }
+
+  .about-main-text {
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .about-photo {
+    width: 704px;
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me {
+    padding-bottom: 82px;
+  }
+
+  .about-wrapper {
+    margin-bottom: 96px;
+    flex-direction: row;
+  }
+
+  .about-text-wrapper {
+    max-width: 680px;
+  }
+
+  .about-photo {
+    width: 680px;
+  }
+}
+
+/* #region Accordion */
+
+#about-ac {
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid var(--circle);
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#about-ac:last-child {
+  margin-bottom: 0px;
+}
+
+#about-ac-header .ac-trigger {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--title);
+  padding: 0;
+  padding-bottom: 24px;
+}
+
+.about-circle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid var(--circle);
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-ac-icon {
+  stroke: var(--text);
+  transition: var(--transition);
+}
+
+#about-ac.is-active .about-ac-icon {
+  transform: rotate(180deg);
+}
+
+#about-ac-trigger.ac-trigger::after {
+  display: none;
+}
+
+#about-ac-text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#about-ac-text:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #about-ac {
+    padding-bottom: 32px;
+  }
+
+  #about-ac.is-active {
+    padding-bottom: 32px;
+  }
+
+  .about-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  #about-ac-header .ac-trigger {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #about-ac {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  #about-ac-header .ac-trigger {
+    padding-bottom: 24px;
+  }
+
+  #about-ac-text {
+    max-width: 612px;
+    padding: 0;
+    margin: 0 68px 10px 694px;
+  }
+
+  #about-ac:last-child #about-ac-text {
+    max-width: 465px;
+  }
+}
+/*#endregion Accordion */
