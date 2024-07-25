@@ -56,16 +56,22 @@
   font-size: 16px;
   font-family: var(--font-family);
   padding-left: 0;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   #ac-text {
     padding-right: 48px;
+    padding-bottom: 24px;
   }
 }
 @media only screen and (min-width: 1440px) {
   #ac:nth-child(even) {
     padding-left: 32px;
+  }
+
+  #ac-text {
+    padding-bottom: 26px;
   }
 }
 
