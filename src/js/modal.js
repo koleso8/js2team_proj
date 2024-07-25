@@ -1,6 +1,10 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 
+const frize = e => {
+  window.scrollTo(0, 0);
+};
+
 const instance = basicLightbox.create(
   `
      <div class="container">
@@ -22,8 +26,16 @@ const instance = basicLightbox.create(
   {
     onShow: instance => {
       instance.element().querySelector('a').onclick = instance.close;
+      document.addEventListener('keydown', e => {
+        if (e.code === 'Escape') instance.close();
+      });
+      document.body.style.position = 'fixed';
+    },
+    onClose: instance => {
+      console.log('onClose', instance);
+      document.body.style.position = '';
     },
   },
 );
 
-//instance.show();
+// instance.show();
