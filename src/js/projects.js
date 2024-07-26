@@ -22,6 +22,7 @@ const projectsList = [
     skill3: '&num;node js',
     skill4: '&num;git',
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
+    href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
     imgMob1: image1_mob1x,
     imgMob2: image1_mob2x,
@@ -34,6 +35,7 @@ const projectsList = [
     skill3: '&num;node js',
     skill4: '&num;git',
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
+    href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
     imgMob1: image2_mob1x,
     imgMob2: image2_mob2x,
@@ -46,6 +48,7 @@ const projectsList = [
     skill3: '&num;node js',
     skill4: '&num;git',
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
+    href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
     imgMob1: image3_mob1x,
     imgMob2: image3_mob2x,
@@ -55,8 +58,9 @@ const projectsList = [
 ];
 
 const markupEl = document.querySelector('.projects-cards');
-const navBtnPrev = document.querySelector('.projects-navigation-prev');
-const navBtnNext = document.querySelector('.projects-navigation-next');
+const swiperEl = document.querySelector('.projects-wrapper');
+const navBtnPrev = document.querySelector('.swiper-button-prev');
+const navBtnNext = document.querySelector('.swiper-button-next');
 
 function cardMarkupTemplate(arr) {
   return arr
@@ -74,7 +78,7 @@ function cardMarkupTemplate(arr) {
             </p>
             <a
               class="projects-card-link"
-              href="https://github.com/koleso8/js2team_proj"
+              href="${item.href}"
               >${item.link}</a
             >
           </div>
@@ -125,12 +129,32 @@ function renderProjectCards(arr) {
 
 renderProjectCards(projectsList);
 
-const swiper = new Swiper('.swiper-wrapper', {
-  direction: 'horizontal',
-  loop: true,
-  slidesPerGroup: 1,
-  navigation: {
-    nextEl: '.swiper-button-prev',
-    prevEl: '.swiper-button-next',
-  },
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+  });
+
+  navBtnNext.addEventListener('click', () => {
+    swiper.slideNext(1000);
+  });
+
+  navBtnPrev.addEventListener('click', () => {
+    swiper.slidePrev(1000);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight') {
+      swiper.slideNext(1000);
+    } else if (event.key === 'ArrowLeft') {
+      swiper.slidePrev(1000);
+    } else if (event.key === 'Tab') {
+      event.preventDefault();
+      if (event.shiftKey) {
+        swiper.slidePrev(1000);
+      } else {
+        swiper.slideNext(1000);
+      }
+    }
+  });
 });
