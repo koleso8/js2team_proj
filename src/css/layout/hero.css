@@ -139,10 +139,10 @@
   );
   background-blend-mode: overlay;
   backdrop-filter: blur(50px);
-  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.4), 20px 10px 20px rgba(0, 0, 0, 0.5); /* Додаткове розмиття для більшого ефекту об'ємності */
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.4), 20px 10px 20px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  animation-fill-mode: forwards; /* Залишити анімацію в кінцевому стані */
-  animation-play-state: paused; /* Зупинити анімацію спочатку */
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 .hero .rectangle:nth-child(1) {
