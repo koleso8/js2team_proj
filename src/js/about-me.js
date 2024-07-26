@@ -97,17 +97,18 @@ function renderSkills() {
 
 renderSkills();
 
-const skillSwiper = new Swiper('.swiper', {
+const skillSwiper = new Swiper('.about-skills-swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.about-swiper-button-next',
+    grabCursor: true,
   },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
   mousewheel: {
-    invert: false,
+    invert: true,
   },
 
   breakpoints: {
@@ -130,11 +131,13 @@ const skillSwiper = new Swiper('.swiper', {
   loop: true,
   setWrapperSize: true,
   spaceBetween: 0,
-  speed: 1000,
+  speed: 600,
   simulateTouch: false,
   slideToClickedSlide: true,
-  allowSlidePrev: false,
+  slidesPerGroup: 1,
 });
+
+console.log(skillSwiper);
 
 function updateHighlightClass() {
   const slides = skillSwiper.slides;
