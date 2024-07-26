@@ -38,9 +38,6 @@
   border-radius: 24px;
 }
 
-@media screen and (min-width: 375px) {
-}
-
 @media screen and (min-width: 768px) {
   .about-me {
     padding-bottom: 48px;
@@ -70,6 +67,7 @@
 @media screen and (min-width: 1440px) {
   .about-me {
     padding-bottom: 82px;
+    padding-top: 48px;
   }
 
   .about-wrapper {
