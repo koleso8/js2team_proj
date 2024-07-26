@@ -137,8 +137,6 @@ const skillSwiper = new Swiper('.about-skills-swiper', {
   slidesPerGroup: 1,
 });
 
-console.log(skillSwiper);
-
 function updateHighlightClass() {
   const slides = skillSwiper.slides;
   slides.forEach(slide => slide.classList.remove('is-first'));
@@ -146,7 +144,19 @@ function updateHighlightClass() {
   firstVisibleSlide.classList.add('is-first');
 }
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    skillSwiper.slideNext(600);
+  } else if (event.key === 'Shift') {
+    event.preventDefault();
+    skillSwiper.slidePrev(600);
+  }
+});
+
+skillSwiper.update();
 skillSwiper.on('slideChange', updateHighlightClass);
+
 skillSwiper.on('slideChangeTransitionEnd', updateHighlightClass);
 
 updateHighlightClass();

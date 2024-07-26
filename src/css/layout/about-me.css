@@ -207,10 +207,16 @@
 
 /* #region Swiper */
 
-.swiper .about-skills-swiper {
+.about-skills-swiper {
   position: relative;
   margin-bottom: 32px;
   overflow: hidden;
+}
+
+.about-skills-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .about-skills-swiper .swiper-slide {
@@ -219,7 +225,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--text);
-  width: calc((100% - 2 * 0px) / 3);
+  width: 130px;
   height: 130px;
   flex-shrink: 0;
   border-radius: 100%;
@@ -227,10 +233,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.about-skills-swiper .swiper-wrapper:last-child {
-  display: none;
+  margin: 0;
+  padding: 0;
 }
 
 .about-skills-swiper .about-swiper-button-next {
@@ -245,6 +249,8 @@
   justify-content: center;
   align-items: center;
   transition: var(--transition);
+  cursor: pointer;
+  z-index: 10;
 }
 
 .about-skills-swiper .is-first {
@@ -268,23 +274,15 @@
     height: 200px;
   }
 
-  .about-skills-swiper .swiper-wrapper {
-    max-width: 600px;
-  }
-
   .about-skills-swiper .about-swiper-icon {
     width: 40px;
     height: 40px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .swiper .about-skills-swiper {
     margin-bottom: 82px;
-  }
-
-  .about-skills-swiper .swiper-wrapper {
-    max-width: 1200px;
   }
 }
 
