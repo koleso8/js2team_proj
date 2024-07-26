@@ -1,0 +1,188 @@
+.covers {
+    margin: 32px 0 32px;
+    position: relative;
+    overflow: hidden;
+    height: 508px;
+    min-width: 320px;
+    background-size: cover;
+}
+
+.covers-projects {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: clip;
+    gap: 24px;
+    top: -30px;
+    right: 0;
+    left: 0;
+}
+
+/* шо тут у нас? */
+/* .covers .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+} */
+
+
+.marquee__inner {
+    display: flex;
+    transform: rotate(16deg);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.marquee_picture {
+    height: 100%;
+}
+
+
+
+/* circle */
+.background-circle1,
+.background-circle2,
+.background-circle3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.background-circle1::before,
+.background-circle2::before,
+.background-circle3::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    background-color: var(--accent-color);
+    opacity: 0.6;
+    filter: blur(172px);
+}
+
+.background-circle1::before {
+    top: 198px;
+    left: 0;
+}
+
+.background-circle2::before {
+    top: 0;
+    left: 428px;
+}
+
+.background-circle3::before {
+    top: 714px;
+    left: 1178px;
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    overflow: hidden;
+    display: block;
+    width: 282px;
+    height: 162px;
+    object-fit: cover;
+}
+
+.animate {
+    animation-name: marqueeLine;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.project-pic {
+    height: 100%;
+}
+
+
+.line1 {
+    animation: marqueeLine1 45s ease-in-out infinite;
+}
+
+.line2 {
+    animation: marqueeLine2 45s ease-in-out infinite;
+
+}
+
+@keyframes marqueeLine1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-55%);
+    }
+
+    65% {
+        transform: translateX(55%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marqueeLine2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(55%);
+    }
+
+    65% {
+        transform: translateX(-55%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .covers {
+        margin: 48px 0 48px;
+        height: 960px;
+    }
+
+    .projects {
+        top: -40px;
+        gap: 44p;
+    }
+
+    .marquee__inner {
+        gap: 44px;
+        margin-bottom: 46px;
+    }
+
+    .marquee__line {
+        width: 544px;
+        height: 314px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .covers {
+        margin: 82px 0 82px;
+    }
+
+    .projects {
+        gap: 64px;
+    }
+
+    .marquee__inner {
+        gap: 64px;
+        margin-bottom: 48px;
+    }
+
+
+}

@@ -45,6 +45,9 @@ function checkBlocksVisibility() {
     if (blockPosition < windowHeight - 100) {
       block.style.opacity = '1';
       block.style.transform = 'translateY(0)';
+    } else {
+      block.style.opacity = '0';
+      block.style.transform = 'translateY(0)';
     }
   });
 }
