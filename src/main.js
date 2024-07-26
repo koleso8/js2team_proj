@@ -11,3 +11,4 @@ import './js/work-together';
 import './js/modal';
 import './js/animation';
 import './js/chenge-theme';
+import './js/images';
