@@ -1,12 +1,12 @@
 import Swiper from 'swiper';
-import 'swiper.min.css';
+import 'swiper/css';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { getReviews } from './API_reviews'
 
 const reviewsList = document.querySelector('.reviews-list');
 
 
-async function getReviews() {
+async function makeReviews() {
     try {
         const reviews = await getReviews();
         renderReviews(reviews); 
@@ -15,7 +15,7 @@ async function getReviews() {
     }
         
 }
-getReviews();
+makeReviews();
 
 
 
@@ -32,8 +32,28 @@ function renderReviews(reviews) {
 }
 
 const swiper = new Swiper('.reviews-swiper', {
-  modules: [Navigation, Pagination, Scrollbar],
-  speed: 500,
+  modules: [Navigation, Scrollbar],
+    speed: 500,
+  
+     navigation: {
+    nextEl: '.reviews-swiper-button-next',
+    prevEl: '.reviews-swiper-button-prev',
+    },
+     
+   slidesPerView: 1,
+   breakpoints: {
+    
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16
+    },
+    
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 16
+    }
+  }
+
 });
 
 
