@@ -70,7 +70,7 @@ const effect = VANTA.NET({
 
 //*=====================chenge-theme
 const bgIcon = document.querySelectorAll('.bg-icon');
-console.log(bgIcon);
+// console.log(bgIcon);
 const screenWidth = window.screen.width;
 // console.log(screenWidth);
 

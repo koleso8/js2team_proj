@@ -20,6 +20,7 @@
   position: static;
   top: 0;
   left: 45%;
+  width: 100px;
 }
 .theme-item {
   width: 20px;
