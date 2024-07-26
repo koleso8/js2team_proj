@@ -1,18 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-
-import image1_mob1x from '../images/projects/image_1_mob@1x.webp';
-import image1_mob2x from '../images/projects/image_1_mob@2x.webp';
-import image1_tab1x from '../images/projects/image_1_tab_desk@1x.webp';
-import image1_tab2x from '../images/projects/image_1_tab_desk@2x.webp';
-import image2_mob1x from '../images/projects/image_2_mob@1x.webp';
-import image2_mob2x from '../images/projects/image_2_mob@2x.webp';
-import image2_tab1x from '../images/projects/image_2_tab_desk@1x.webp';
-import image2_tab2x from '../images/projects/image_2_tab_desk@2x.webp';
-import image3_mob1x from '../images/projects/image_3_mob@1x.webp';
-import image3_mob2x from '../images/projects/image_3_mob@2x.webp';
-import image3_tab1x from '../images/projects/image_3_tab_desk@1x.webp';
-import image3_tab2x from '../images/projects/image_3_tab_desk@2x.webp';
+import { projectsImages } from './images';
 
 const projectsList = [
   {
@@ -23,10 +11,10 @@ const projectsList = [
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
     href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
-    imgMob1: image1_mob1x,
-    imgMob2: image1_mob2x,
-    imgTab1: image1_tab1x,
-    imgTab2: image1_tab2x,
+    imgMob1: projectsImages.project1_mob1x,
+    imgMob2: projectsImages.project1_mob2x,
+    imgTab1: projectsImages.project1_tab1x,
+    imgTab2: projectsImages.project1_tab2x,
   },
   {
     skill1: '&num;react',
@@ -36,10 +24,10 @@ const projectsList = [
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
     href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
-    imgMob1: image2_mob1x,
-    imgMob2: image2_mob2x,
-    imgTab1: image2_tab1x,
-    imgTab2: image2_tab2x,
+    imgMob1: projectsImages.project2_mob1x,
+    imgMob2: projectsImages.project2_mob2x,
+    imgTab1: projectsImages.project2_tab1x,
+    imgTab2: projectsImages.project2_tab2x,
   },
   {
     skill1: '&num;react',
@@ -49,10 +37,10 @@ const projectsList = [
     title: 'Programming Across Borders: Ideas, Technologies, Innovations',
     href: 'https://github.com/koleso8/js2team_proj',
     link: 'See project',
-    imgMob1: image3_mob1x,
-    imgMob2: image3_mob2x,
-    imgTab1: image3_tab1x,
-    imgTab2: image3_tab2x,
+    imgMob1: projectsImages.project3_mob1x,
+    imgMob2: projectsImages.project3_mob2x,
+    imgTab1: projectsImages.project3_tab1x,
+    imgTab2: projectsImages.project3_tab2x,
   },
 ];
 
@@ -78,6 +66,7 @@ function cardMarkupTemplate(arr) {
             </p>
             <a
               class="projects-card-link"
+              target="_blank"
               href="${item.href}"
               >${item.link}</a
             >
