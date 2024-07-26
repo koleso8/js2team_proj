@@ -58,9 +58,10 @@ const projectsList = [
 ];
 
 const markupEl = document.querySelector('.projects-cards');
-const swiperEl = document.querySelector('.projects-wrapper');
 const navBtnPrev = document.querySelector('.swiper-button-prev');
 const navBtnNext = document.querySelector('.swiper-button-next');
+const arrowPrevEl = document.querySelector('.icon-prev');
+const arrowNextEl = document.querySelector('.icon-next');
 
 function cardMarkupTemplate(arr) {
   return arr
@@ -135,6 +136,24 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 20,
   });
 
+  function updateNavigationButtons() {
+    if (swiper.isBeginning) {
+      navBtnPrev.classList.add('disabled');
+      arrowPrevEl.classList.add('disabled');
+    } else {
+      navBtnPrev.classList.remove('disabled');
+      arrowPrevEl.classList.remove('disabled');
+    }
+
+    if (swiper.isEnd) {
+      navBtnNext.classList.add('disabled');
+      arrowNextEl.classList.add('disabled');
+    } else {
+      navBtnNext.classList.remove('disabled');
+      arrowNextEl.classList.remove('disabled');
+    }
+  }
+
   navBtnNext.addEventListener('click', () => {
     swiper.slideNext(1000);
   });
@@ -157,4 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  swiper.on('slideChange', updateNavigationButtons);
+  updateNavigationButtons();
 });
