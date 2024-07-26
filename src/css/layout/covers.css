@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-.projects {
+.covers-projects {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,8 @@
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    background-color: rgba(237, 59, 68, 0.6);
+    background-color: var(--accent-color);
+    opacity: 0.6;
     filter: blur(172px);
 }
 
