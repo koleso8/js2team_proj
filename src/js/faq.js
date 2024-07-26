@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import svg from '../images/svg/icons.svg';
 
 const refs = {
   listEl: document.querySelector('.faq-list'),
@@ -43,7 +44,7 @@ function listItemTemplay(item) {
     ${title}
     <span class="circle-faq">
     <svg class="icon-faq " width="12" height="8">
-    <use href="images/svg/icons.svg#arrowDown"></use>
+    <use href="${svg}#arrowDown"></use>
     </svg>
     </span>
     </button>
