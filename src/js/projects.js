@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import svg from '../images/svg/icons.svg';
 
 import image1_mob1x from '../images/projects/image_1_mob@1x.webp';
 import image1_mob2x from '../images/projects/image_1_mob@2x.webp';
