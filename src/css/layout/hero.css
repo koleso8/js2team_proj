@@ -119,9 +119,8 @@
   height: 100vh;
   background: linear-gradient(
     270deg,
-    #1c1d20 48%,
-    #69292d 67.71%,
-    #ed3b44 99.91%
+    #1c1d20 46%,
+    /* #69292d 67.71%, */ var(--accent-color) 99.91%
   );
   overflow: hidden;
 }
