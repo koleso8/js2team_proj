@@ -49,31 +49,46 @@ function onMobMenuBtnClick() {
   const mobInstance = basicLightbox.create(
     `
     <div class="mob-menu-backdrop">
-  <div class="mob-menu-background">
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-  </div>
-  <div class="mob-menu-modal">
-    <ul class="mob-menu-list">
-      <li class="mob-menu-item">
-        <a href="#about-me" class="mob-menu-link">About me</a>
-      </li>
-      <li class="mob-menu-item">
-        <a href="#benefits" class="mob-menu-link">Benefits</a>
-      </li>
-      <li class="mob-menu-item">
-        <a href="#projects" class="mob-menu-link">Projects</a>
-      </li>
-      <li class="mob-menu-item">
-        <a href="#faq" class="mob-menu-link">FAQ</a>
-      </li>
-    </ul>
-    <a href="#work-together" class="mob-order-btn">Order the project</a>
-  </div>
-</div>
+      <div class="mob-menu-modal">
+        <div class="rectangles-container">
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+        </div>
+         <button class="mob-menu-close-btn">
+        <span class="mob-menu-close-btn-line mob-menu-close-btn-line1"></span>
+  <span class="mob-menu-close-btn-line mob-menu-close-btn-line2"></span>
+      </button>
+        <ul class="mob-menu-list">
+          <li class="mob-menu-item">
+            <a href="#about-me" class="mob-menu-link">
+              About me
+            </a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="#benefits" class="mob-menu-link">
+              Benefits
+            </a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="#projects" class="mob-menu-link">
+              Projects
+            </a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="#faq" class="mob-menu-link">
+              FAQ
+            </a>
+          </li>
+        </ul>
+        <a href="#work-together" class="mob-order-btn">
+          Order the project
+        </a>
+      </div>
+    </div>
     `,
     {
       onShow: mobInstance => {
