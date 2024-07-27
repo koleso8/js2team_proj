@@ -81,7 +81,7 @@
 }
 
 .icon-ben {
-  stroke: var(--text);
+  stroke: var(--accent-stroke);
   fill: transparent;
 }
 
