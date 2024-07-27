@@ -108,23 +108,23 @@ const skillSwiper = new Swiper('.about-skills-swiper', {
     onlyInViewport: true,
   },
   mousewheel: {
-    invert: true,
+    invert: false,
   },
 
   breakpoints: {
     375: {
       slidesPerView: 2,
-      width: 260,
+      // width: 260,
     },
 
     768: {
       slidesPerView: 3,
-      width: 600,
+      // width: 600,
     },
 
     1440: {
       slidesPerView: 6,
-      width: 1200,
+      // width: 1200,
     },
   },
 
