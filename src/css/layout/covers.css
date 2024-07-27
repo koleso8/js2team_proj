@@ -5,6 +5,7 @@
     height: 508px;
     min-width: 320px;
     background-size: cover;
+    width: 100%;
 }
 
 .covers-projects {
@@ -20,12 +21,10 @@
     left: 0;
 }
 
-/* шо тут у нас? */
-/* .covers .container {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: flex;
-} */
+.covers {
+    padding-top: 82px;
+    padding-bottom: 82px;
+}
 
 
 .marquee__inner {
@@ -56,12 +55,12 @@
 .background-circle3::before {
     content: "";
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 175px;
+    height: 175px;
     border-radius: 100%;
     background-color: var(--accent-color);
     opacity: 0.6;
-    filter: blur(172px);
+    filter: blur(100px);
 }
 
 .background-circle1::before {
@@ -75,8 +74,8 @@
 }
 
 .background-circle3::before {
-    top: 714px;
-    left: 1178px;
+    top: 60%;
+    right: 25%;
 }
 
 .marquee__line {
@@ -117,11 +116,11 @@
     }
 
     35% {
-        transform: translateX(-55%);
+        transform: translateX(-65%);
     }
 
     65% {
-        transform: translateX(55%);
+        transform: translateX(65%);
     }
 
     100% {
@@ -135,11 +134,11 @@
     }
 
     35% {
-        transform: translateX(55%);
+        transform: translateX(65%);
     }
 
     65% {
-        transform: translateX(-55%);
+        transform: translateX(-65%);
     }
 
     100% {
