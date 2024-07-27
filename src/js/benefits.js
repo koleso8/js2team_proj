@@ -68,26 +68,12 @@ const effect = VANTA.NET({
   backgroundColor: 0x1c1d20,
 });
 
-//*=====================chenge-theme
-const bgIcon = document.querySelectorAll('.bg-icon');
-// console.log(bgIcon);
-const screenWidth = window.screen.width;
-// console.log(screenWidth);
-
 export function redAnimation() {
-  // bgIcon[0].classList.add('red');
-  // bgIcon[1].classList.add('red');
-  // bgIcon[2].classList.add('red');
-  // bgIcon[3].classList.add('red');
   effect.setOptions({
     color: 0xed3b44,
   });
 }
 export function yellowAnimation() {
-  // bgIcon[0].classList.add('yellow');
-  // bgIcon[1].classList.add('yellow');
-  // bgIcon[2].classList.add('yellow');
-  // bgIcon[3].classList.add('yellow');
   effect.setOptions({
     color: 0xc6e327,
   });
@@ -96,5 +82,17 @@ export function yellowAnimation() {
 export function orangeAnimation() {
   effect.setOptions({
     color: 0xff7f08,
+  });
+}
+
+export function greenAnimation() {
+  effect.setOptions({
+    color: 0x2b4441,
+  });
+}
+
+export function blueAnimation() {
+  effect.setOptions({
+    color: 0x0041e8,
   });
 }
