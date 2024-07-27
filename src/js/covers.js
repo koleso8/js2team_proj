@@ -65,7 +65,7 @@ function lineMarkupTemplate(arr) {
     .map(item => {
       return `
        <div class="marquee">
-         <ul class="marquee__inner">
+        <ul class="marquee__inner">
                         <li class="marquee__line animate line1">
                             <div class="marquee_picture">
                                 <picture>
@@ -73,7 +73,7 @@ function lineMarkupTemplate(arr) {
                                     ${arr[0]} 1x,
                                     ${arr[1]} 2x"
                                      type="image/webp" width="544" height="314" />
-                                    <source media="(min-width: 768px)" srcset="
+                                    <source media="(min-width: 768px)" srcset=" 
                                     ${arr[0]} 1x,
                                     ${arr[1]} 2x
                     " type="image/webp" width="544" height="314" />
@@ -289,12 +289,15 @@ function lineMarkupTemplate(arr) {
     .join('');
 }
 
-function renderCoversLine(arr) {
-  let markup = lineMarkupTemplate(arr);
-  document.querySelector('.background-circle3').innerHTML = markup;
-}
+// function renderCoversLine(arr) {
+//   const markup = lineMarkupTemplate(arr);
+//   document.querySelector('.background-circle3').innerHTML = markup;
+// }
 
-renderCoversLine(coversList);
+document.querySelector('.background-circle3').innerHTML =
+  lineMarkupTemplate(coversList);
+
+// renderCoversLine(coversList);
 
 const coversSection = document.querySelector('.covers');
 const line = document.querySelectorAll('.marquee__line');
