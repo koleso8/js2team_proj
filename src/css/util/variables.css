@@ -14,10 +14,12 @@
   --accent-color: #ed3b44;
   --accent-color-hover: #c11921;
 }
+
 .orange {
-  --accent-color: orange;
+  --accent-color: red;
   --accent-color-hover: orange;
 }
+
 .yellow {
   --accent-color: yellow;
   --accent-color-hover: yellow;
