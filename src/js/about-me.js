@@ -108,33 +108,33 @@ const skillSwiper = new Swiper('.about-skills-swiper', {
     onlyInViewport: true,
   },
   mousewheel: {
-    invert: true,
+    invert: false,
+    sensitivity: 1,
+    eventsTarget: '.about-skills-swiper',
   },
 
   breakpoints: {
     375: {
       slidesPerView: 2,
-      width: 260,
     },
 
     768: {
       slidesPerView: 3,
-      width: 600,
     },
 
     1440: {
       slidesPerView: 6,
-      width: 1200,
     },
   },
 
   loop: true,
   setWrapperSize: true,
   spaceBetween: 0,
-  speed: 600,
+  speed: 1000,
   simulateTouch: false,
   slideToClickedSlide: true,
   slidesPerGroup: 1,
+  grabCursor: true,
 });
 
 function updateHighlightClass() {
@@ -147,10 +147,10 @@ function updateHighlightClass() {
 document.addEventListener('keydown', event => {
   if (event.key === 'Tab') {
     event.preventDefault();
-    skillSwiper.slideNext(600);
+    skillSwiper.slideNext(1000);
   } else if (event.key === 'Shift') {
     event.preventDefault();
-    skillSwiper.slidePrev(600);
+    skillSwiper.slidePrev(1000);
   }
 });
 

@@ -116,11 +116,11 @@
     }
 
     35% {
-        transform: translateX(-65%);
+        transform: translateX(-35%);
     }
 
     65% {
-        transform: translateX(65%);
+        transform: translateX(15%);
     }
 
     100% {
@@ -130,15 +130,15 @@
 
 @keyframes marqueeLine2 {
     0% {
-        transform: translateX(0);
+        transform: translateX(-25%);
     }
 
     35% {
-        transform: translateX(65%);
+        transform: translateX(5%);
     }
 
     65% {
-        transform: translateX(-65%);
+        transform: translateX(-20%);
     }
 
     100% {
@@ -153,7 +153,7 @@
         height: 960px;
     }
 
-    .projects {
+    .covers-projects {
         top: -40px;
         gap: 44p;
     }
@@ -174,7 +174,7 @@
         margin: 82px 0 82px;
     }
 
-    .projects {
+    .covers-projects {
         gap: 64px;
     }
 
