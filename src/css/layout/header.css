@@ -345,6 +345,11 @@
   left: 0;
 }
 
+.mob-menu-item:hover,
+.mob-menu-item::after:hover {
+  color: var(--accent-color-hover);
+}
+
 .mob-order-btn {
   position: absolute;
   bottom: 64px;

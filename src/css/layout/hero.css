@@ -63,7 +63,7 @@
   }
 }
 .contact-item {
-  color: --text;
+  color: var(--text);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -81,10 +81,15 @@
   height: 37px;
   text-transform: uppercase;
   width: 37px;
-  transition: border var(--transition);
+  transition: var(--transition);
 }
 .contact-item.socials a:hover {
   border: 1px solid var(--text);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .contact-item.mail a {
@@ -95,11 +100,16 @@
   justify-content: center;
   align-items: center;
   height: 37px;
-  transition: border var(--transition);
+  transition: var(--transition);
 }
 
 .contact-item.mail a:hover {
   border: 1px solid var(--text);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 @media screen and (min-width: 768px) {
