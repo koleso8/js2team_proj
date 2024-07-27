@@ -137,7 +137,7 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
-  background-color: #ed3b44;
+  background-color: var(--accent-color);
   color: var(--text);
 }
 
