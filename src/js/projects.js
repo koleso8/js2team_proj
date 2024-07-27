@@ -45,8 +45,8 @@ const projectsList = [
 ];
 
 const markupEl = document.querySelector('.projects-cards');
-const navBtnPrev = document.querySelector('.swiper-button-prev');
-const navBtnNext = document.querySelector('.swiper-button-next');
+const navBtnPrevEL = document.querySelector('.swiper-button-prev');
+const navBtnNextEl = document.querySelector('.swiper-button-next');
 const arrowPrevEl = document.querySelector('.icon-prev');
 const arrowNextEl = document.querySelector('.icon-next');
 
@@ -103,6 +103,7 @@ function cardMarkupTemplate(arr) {
                 width="311"
                 height="195"
                 class="projects-card-img"
+                loading="lazy"
             />
             </picture>
           </div>
@@ -122,31 +123,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 20,
+    grabCursor: true,
   });
 
   function updateNavigationButtons() {
     if (swiper.isBeginning) {
-      navBtnPrev.classList.add('disabled');
+      navBtnPrevEL.classList.add('disabled');
       arrowPrevEl.classList.add('disabled');
     } else {
-      navBtnPrev.classList.remove('disabled');
+      navBtnPrevEL.classList.remove('disabled');
       arrowPrevEl.classList.remove('disabled');
     }
 
     if (swiper.isEnd) {
-      navBtnNext.classList.add('disabled');
+      navBtnNextEl.classList.add('disabled');
       arrowNextEl.classList.add('disabled');
     } else {
-      navBtnNext.classList.remove('disabled');
+      navBtnNextEl.classList.remove('disabled');
       arrowNextEl.classList.remove('disabled');
     }
   }
 
-  navBtnNext.addEventListener('click', () => {
+  navBtnNextEl.addEventListener('click', () => {
     swiper.slideNext(1000);
   });
 
-  navBtnPrev.addEventListener('click', () => {
+  navBtnPrevEL.addEventListener('click', () => {
     swiper.slidePrev(1000);
   });
 
