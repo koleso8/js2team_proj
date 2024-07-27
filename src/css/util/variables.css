@@ -11,16 +11,19 @@
 }
 
 .red {
+  --accent-stroke: #fafafa;
   --accent-color: #ed3b44;
-  --accent-color-hover: #c11921;
+  --accent-color-hover: #ce040e;
 }
 
 .orange {
-  --accent-color: red;
-  --accent-color-hover: orange;
+  --accent-stroke: #fff2f2;
+  --accent-color: orange;
+  --accent-color-hover: rgb(193, 126, 3);
 }
 
 .yellow {
+  --accent-stroke: #1c1d20;
   --accent-color: yellow;
-  --accent-color-hover: yellow;
+  --accent-color-hover: rgb(192, 192, 2);
 }
