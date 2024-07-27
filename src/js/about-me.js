@@ -1,8 +1,14 @@
 import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
+import svg from '../images/svg/icons.svg';
+import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
+
+Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 const refs = {
   accordionContainerEl: document.querySelector('.about-me-accordion-container'),
+  swiperWrapperEl: document.querySelector('.swiper-wrapper'),
 };
 
 const aboutMeFacts = [
@@ -31,7 +37,17 @@ const aboutMeFacts = [
   },
 ];
 
-function factsTemplate(array) {
+const skills = [
+  'HTML / CSS',
+  'JavaScript',
+  'React',
+  'Node. js',
+  'React Native',
+  'Soft skills',
+  'Python',
+];
+
+function factsAboutMeTemplate(array) {
   return array
     .map(item => {
       return `
@@ -40,7 +56,7 @@ function factsTemplate(array) {
       <button type="button" class="ac-trigger" id="about-ac-trigger">
       ${item.title}
        <span class="about-circle"><svg class="about-ac-icon" width="10" height="5">
-                <use href="./svg/icons.svg#arrowDown"></use>
+                <use href="${svg}#arrowDown"></use>
               </svg>
               </span>
       </button>
@@ -55,11 +71,92 @@ function factsTemplate(array) {
     .join('');
 }
 
-function renderMarkup() {
-  const markup = factsTemplate(aboutMeFacts);
+function renderAboutMeFacts() {
+  const markup = factsAboutMeTemplate(aboutMeFacts);
   refs.accordionContainerEl.innerHTML = markup;
 }
 
-renderMarkup();
+renderAboutMeFacts();
 
 new Accordion('.about-me-accordion-container', { openOnInit: [0] });
+
+function skillsTemplate(array) {
+  return array
+    .map(item => {
+      return `
+    <div class="swiper-slide">${item}</div>
+        `;
+    })
+    .join('');
+}
+
+function renderSkills() {
+  const markup = skillsTemplate(skills);
+  refs.swiperWrapperEl.innerHTML = markup;
+}
+
+renderSkills();
+
+const skillSwiper = new Swiper('.about-skills-swiper', {
+  modules: [Navigation, Keyboard, Mousewheel],
+  navigation: {
+    nextEl: '.about-swiper-button-next',
+    grabCursor: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    invert: true,
+  },
+
+  breakpoints: {
+    375: {
+      slidesPerView: 2,
+      width: 260,
+    },
+
+    768: {
+      slidesPerView: 3,
+      width: 600,
+    },
+
+    1440: {
+      slidesPerView: 6,
+      width: 1200,
+    },
+  },
+
+  loop: true,
+  setWrapperSize: true,
+  spaceBetween: 0,
+  speed: 600,
+  simulateTouch: false,
+  slideToClickedSlide: true,
+  slidesPerGroup: 1,
+});
+
+function updateHighlightClass() {
+  const slides = skillSwiper.slides;
+  slides.forEach(slide => slide.classList.remove('is-first'));
+  const firstVisibleSlide = slides[skillSwiper.activeIndex];
+  firstVisibleSlide.classList.add('is-first');
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    skillSwiper.slideNext(600);
+  } else if (event.key === 'Shift') {
+    event.preventDefault();
+    skillSwiper.slidePrev(600);
+  }
+});
+
+skillSwiper.update();
+skillSwiper.on('slideChange', updateHighlightClass);
+
+skillSwiper.on('slideChangeTransitionEnd', updateHighlightClass);
+
+updateHighlightClass();
