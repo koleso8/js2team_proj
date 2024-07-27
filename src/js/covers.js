@@ -61,46 +61,36 @@ let coversList = [
 ];
 
 function lineMarkupTemplate(arr) {
-  return arr
-    .map(item => {
-      return `
+  return arr.map(item => {
+    return `
        <div class="marquee">
-         <ul class="marquee__inner">
-                        <li class="marquee__line animate line1">
-                            <div class="marquee_picture">
-                                <picture>
-                                    <source media="(min-width: 1440px)" srcset="
+        <ul class="marquee__inner">
+        <li class="marquee__line animate line1">
+        <div class="marquee_picture">
+     <picture>
+     <source media="(min-width: 1440px)" srcset="
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x"
-                                     type="image/webp" width="544" height="314" />
-                                    <source media="(min-width: 768px)" srcset="
+                                    ${arr[1]} 2x" />
+    <source media="(min-width: 768px)" srcset=" 
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x
-                    " type="image/webp" width="544" height="314" />
-                                    <source media="(max-width: 767px)" srcset="
+                                    ${arr[1]} 2x "/>
+     <source media="(max-width: 767px)" srcset="
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x
-                    " type="image/webp" width="282" />
-                                    <img class="project-pic" src="
-                                    ${arr[0]}" alt="website" width="282"
-                                        height="162" loading="lazy" />
-                                </picture>
-                            </div> </li>
-
+                                    ${arr[1]} 2x "/>
+      <img class="project-pic" src="
+      ${arr[0]}" alt="website" width="282" height="162" loading="lazy"/> </picture> </div> </li>
                         <li class="marquee__line animate line1">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[2]} 1x,
-                                    ${arr[3]} 2x" 
-                                    type="image/webp" width="544" height="314" />
+                                    ${arr[3]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[2]} 1x,
-                                    ${arr[3]} 2x"
-                                     type="image/webp" width="544" height="314" />
+                                    ${arr[3]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[2]} 1x,
-                                    ${arr[3]} 2x" type="image/webp" width="282" />
+                                    ${arr[3]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[2]}" alt="website" width="282"
                                     height="162" loading="lazy" />
@@ -112,39 +102,32 @@ function lineMarkupTemplate(arr) {
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[4]} 1x,
-                                    ${arr[5]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[5]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[4]} 1x,
-                                    ${arr[5]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[5]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[4]} 1x,
-                                    ${arr[5]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[5]} 2x"/>
                                     <img class="project-pic" src="
                                     ${arr[4]}" alt="website" width="282"
                                         height="162" loading="lazy" />
                                 </picture>
-                            </div> </li>
-                            
-                    </ul>
+                            </div> </li></ul>
+
                     <ul class="marquee__inner">
                         <li class="marquee__line animate line2">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[6]} 1x,
-                                    ${arr[7]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[7]} 2x" />
                         <source media="(min-width: 768px)" srcset="
                         ${arr[6]} 1x,
-                        ${arr[7]} 2x
-                    " type="image/webp" width="544" height="314" />
+                        ${arr[7]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[6]} 1x,
-                                    ${arr[7]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[7]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[6]}" alt="website" width="282"
                                         height="162" loading="lazy" />
@@ -156,104 +139,80 @@ function lineMarkupTemplate(arr) {
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[8]} 1x,
-                                     ${arr[9]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[9]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[8]} 1x,
-                                    ${arr[9]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[9]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[8]} 1x,
-                                    ${arr[9]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[9]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[8]}" alt="website" width="282"
                                         height="162" loading="lazy" />
                                 </picture>
                             </div>
                         </li>
-
                         <li class="marquee__line animate line2">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[10]} 1x,
-                                     ${arr[11]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[11]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[10]} 1x,
-                                    ${arr[11]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[11]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[10]} 1x,
-                                    ${arr[11]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[11]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[10]}" alt="website" width="282"
-                                        height="162" loading="lazy" />
-                                </picture>
-                            </div>
-                        </li>
-
+                                        height="162" loading="lazy"  />
+                                </picture></div> </li>
                         <li class="marquee__line animate line2">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[12]} 1x,
-                                    ${arr[13]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[13]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[12]} 1x,
-                                     ${arr[13]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[13]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[12]} 1x,
-                                    ${arr[13]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[13]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[12]}" alt="website" width="282"
                                         height="162" loading="lazy" />
-                                </picture>
-                            </div>
-                        </li>
-                    </ul>
+                                </picture></div></li></ul>
                     <ul class="marquee__inner">
                         <li class="marquee__line animate line1">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[14]} 1x,
-                                    ${arr[15]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[15]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[14]} 1x,
-                                     ${arr[15]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[15]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[14]} 1x,
-                                     ${arr[15]} 2x
-                    " type="image/webp" width="282" />
+                                     ${arr[15]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[14]}" alt="website" width="282"
                                     height="162" loading="lazy" />
-                                </picture>
-                            </div>
-                        </li>
+                                </picture> </div> </li>
                         <li class="marquee__line animate line1">
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[16]} 1x,
-                                    ${arr[17]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[17]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[16]} 1x,
-                                    ${arr[17]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                    ${arr[17]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[16]} 1x,
-                                    ${arr[17]} 2x
-                    " type="image/webp" width="282" />
+                                    ${arr[17]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[16]}" alt="website" width="282"
                                         height="162" loading="lazy" />
@@ -266,35 +225,35 @@ function lineMarkupTemplate(arr) {
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
                                     ${arr[18]} 1x,
-                                     ${arr[19]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[19]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
                                     ${arr[18]} 1x,
-                                     ${arr[19]} 2x
-                    " type="image/webp" width="544" height="314" />
+                                     ${arr[19]} 2x" />
                                     <source media="(max-width: 767px)" srcset="
                                     ${arr[18]} 1x,
-                                    ${arr[19]} 2x " type="image/webp" width="282" />
+                                    ${arr[19]} 2x" />
                                     <img class="project-pic" src="
                                     ${arr[18]}" alt="website" width="282"
-                                        height="162" loading="lazy" />
+                                     height="162" loading="lazy" />
                                 </picture>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </div>`;
-    })
-    .join('');
+  });
+  // .join('');
 }
 
-function renderCoversLine(arr) {
-  let markup = lineMarkupTemplate(arr);
-  document.querySelector('.background-circle3').innerHTML = markup;
-}
+// function renderCoversLine(arr) {
+//   const markup = lineMarkupTemplate(arr);
+//   document.querySelector('.background-circle3').innerHTML = markup;
+// }
 
-renderCoversLine(coversList);
+document.querySelector('.background-circle3').innerHTML =
+  lineMarkupTemplate(coversList);
+
+// renderCoversLine(coversList);
 
 const coversSection = document.querySelector('.covers');
 const line = document.querySelectorAll('.marquee__line');
