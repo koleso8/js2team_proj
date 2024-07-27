@@ -207,10 +207,17 @@
 
 /* #region Swiper */
 
-.about-skills-swiper {
+.about-me-skills {
   position: relative;
+}
+
+.about-skills-swiper {
+  width: 260px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-bottom: 32px;
   overflow: hidden;
+  transition: 1000ms cubic-bezier(0.41, 0.6, 0.52, 0.93);
 }
 
 .about-skills-swiper .swiper-wrapper {
@@ -225,8 +232,8 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--text);
-  width: 130px;
-  height: 130px;
+  width: 130px !important;
+  height: 130px !important;
   flex-shrink: 0;
   border-radius: 100%;
   border: 1px solid var(--circle);
@@ -237,20 +244,19 @@
   padding: 0;
 }
 
-.about-skills-swiper .about-swiper-button-next {
-  width: 50px;
-  height: 50px;
+.about-swiper-button-next {
+  width: 28px;
+  height: 28px;
   position: absolute;
+  top: 50%;
   right: 0;
-  top: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: var(--transition);
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
 }
 
 .about-skills-swiper .is-first {
@@ -258,31 +264,38 @@
   border: none;
 }
 
-.about-skills-swiper .about-swiper-icon {
+.about-swiper-icon {
   fill: none;
   stroke: var(--arrow);
 }
 
 @media screen and (min-width: 768px) {
-  .swiper .about-skills-swiper {
+  .about-skills-swiper {
     margin-bottom: 48px;
+    width: 600px;
   }
 
   .about-skills-swiper .swiper-slide {
     font-size: 20px;
-    width: 200px;
-    height: 200px;
+    width: 200px !important;
+    height: 200px !important;
   }
 
-  .about-skills-swiper .about-swiper-icon {
+  .about-swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-swiper-icon {
     width: 40px;
     height: 40px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper .about-skills-swiper {
+  .about-skills-swiper {
     margin-bottom: 82px;
+    width: 1200px;
   }
 }
 
