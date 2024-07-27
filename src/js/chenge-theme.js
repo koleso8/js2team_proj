@@ -1,23 +1,44 @@
-import { orangeAnimation, redAnimation, yellowAnimation } from './benefits';
+import {
+  orangeAnimation,
+  redAnimation,
+  yellowAnimation,
+  greenAnimation,
+  blueAnimation,
+} from './benefits';
 
-const refs = {
-  themeList: document.querySelector('.theme-list'),
-};
+const buttonRedEl = document.querySelector('.theme-red');
+const buttonYellowEl = document.querySelector('.theme-yellow');
+const buttonOrangeEl = document.querySelector('.theme-orange');
+const buttonGreenEl = document.querySelector('.theme-green');
+const buttonBlueEl = document.querySelector('.theme-blue');
+const bodyEl = document.querySelector('body');
 
-refs.themeList.addEventListener('click', e => {
-  console.log(e.target.dataset.action);
-  switch (e.target.dataset.action) {
-    case 'red':
-      return redAnimation();
-      break;
-    case 'yellow':
-      return yellowAnimation();
-      break;
-    case 'orange':
-      return orangeAnimation();
-      break;
+function changeTheme(themeClass) {
+  bodyEl.classList = '';
+  bodyEl.classList.add(themeClass);
+}
 
-    default:
-      break;
-  }
+buttonRedEl.addEventListener('click', () => {
+  changeTheme('red');
+  redAnimation();
+});
+
+buttonYellowEl.addEventListener('click', () => {
+  changeTheme('yellow');
+  yellowAnimation();
+});
+
+buttonOrangeEl.addEventListener('click', () => {
+  changeTheme('orange');
+  orangeAnimation();
+});
+
+buttonGreenEl.addEventListener('click', () => {
+  changeTheme('green');
+  greenAnimation();
+});
+
+buttonBlueEl.addEventListener('click', () => {
+  changeTheme('blue');
+  blueAnimation();
 });

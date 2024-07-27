@@ -300,3 +300,67 @@
 }
 
 /* #endregion Swiper */
+
+/* #region theme */
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.theme {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.theme-red {
+  background-color: #ed3b44;
+}
+
+.theme-red:hover {
+  background-color: #e0373f;
+}
+
+.theme-yellow {
+  background-color: #c6e327;
+}
+
+.theme-yellow:hover {
+  background-color: #9ab504;
+}
+
+.theme-orange {
+  background-color: #ff7f08;
+}
+
+.theme-orange:hover {
+  background-color: #cf6707;
+}
+
+.theme-green {
+  background-color: #2b4441;
+}
+
+.theme-green:hover {
+  background-color: #1a322f;
+}
+
+.theme-blue {
+  background-color: #0041e8;
+}
+
+.theme-blue:hover {
+  background-color: #0138c4;
+}
+
+@media screen and (min-width: 1440px) {
+  .theme-buttons {
+    margin-bottom: 48px;
+  }
+}
+/* #endregion theme */
