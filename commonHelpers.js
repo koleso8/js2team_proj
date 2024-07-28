@@ -3,7 +3,7 @@ import{A as N,S as v,N as A,K as S,M as E,a as T,b as P}from"./assets/vendor-407
     <h3 class="ac-header" id="about-ac-header">
       <button type="button" class="ac-trigger" id="about-ac-trigger">
       ${t.title}
-       <span class="about-circle"><svg class="about-ac-icon" width="10" height="5">
+       <span class="about-circle"><svg class="about-ac-icon" width="12" height="8">
                 <use href="${d}#arrowDown"></use>
               </svg>
               </span>
