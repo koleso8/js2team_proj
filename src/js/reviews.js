@@ -22,7 +22,7 @@ makeReviews();
 function renderReviews(reviews) {
     const markup = reviews.map(review => {
         return `<li class="reviews-item swiper-slide">
-          <img src="${review.avatar_url}" alt="${review.author}" />
+          <img src="${review.avatar_url}" alt="${review.author}"/>
           <h3>${review.author}</h3>
           <p>${review.review}</p>
         </li>`
