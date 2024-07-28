@@ -60,6 +60,52 @@ let coversList = [
   image10_2x,
 ];
 
+// function addImg(array) {
+//   const ulElement = document.createElement('ul');
+//   ulElement.classList.add('marquee__inner');
+
+//   array.forEach(coversItem => {
+//     const liElement = document.createElement('li');
+//     liElement.classList.add('marquee__line', 'animate', 'line1');
+
+//     const divElement = document.createElement('div');
+//     divElement.classList.add('marquee_picture');
+
+//     const pictureElement = document.createElement('picture');
+
+//     const sourceElement1 = document.createElement('source');
+//     sourceElement1.media = '(min-width: 1440px)';
+//     sourceElement1.srcset = `${array[0]} 1x, ${array[1]} 2x`;
+
+//     const sourceElement2 = document.createElement('source');
+//     sourceElement2.media = '(min-width: 768px)';
+//     sourceElement2.srcset = `${array[0]} 1x, ${array[1]} 2x`;
+
+//     const sourceElement3 = document.createElement('source');
+//     sourceElement3.media = '(max-width: 767px)';
+//     sourceElement3.srcset = `${array[0]} 1x, ${array[1]} 2x`;
+
+//     const imgElement = document.createElement('img');
+//     imgElement.classList.add('project-pic');
+//     imgElement.src = array[0];
+//     imgElement.alt = 'website';
+//     imgElement.width = 282;
+//     imgElement.height = 162;
+//     imgElement.loading = 'lazy';
+
+//     pictureElement.appendChild(sourceElement1);
+//     pictureElement.appendChild(sourceElement2);
+//     pictureElement.appendChild(sourceElement3);
+//     pictureElement.appendChild(imgElement);
+
+//     divElement.appendChild(pictureElement);
+//     liElement.appendChild(divElement);
+//     ulElement.appendChild(liElement);
+//   });
+
+//   addImg(coversList);
+// }
+
 function lineMarkupTemplate(arr) {
   return arr.map(item => {
     return `
@@ -73,10 +119,10 @@ function lineMarkupTemplate(arr) {
                                     ${arr[1]} 2x" />
     <source media="(min-width: 768px)" srcset=" 
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x "/>
+                                    ${arr[1]} 2x" />
      <source media="(max-width: 767px)" srcset="
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x "/>
+                                    ${arr[1]} 2x" />
       <img class="project-pic" src="
       ${arr[0]}" alt="website" width="282" height="162" loading="lazy"/> </picture> </div> </li>
                         <li class="marquee__line animate line1">
@@ -242,9 +288,9 @@ function lineMarkupTemplate(arr) {
                 </div>
             </div>`;
   });
-  // .join('');
 }
 
+//  .join('');
 // function renderCoversLine(arr) {
 //   const markup = lineMarkupTemplate(arr);
 //   document.querySelector('.background-circle3').innerHTML = markup;
