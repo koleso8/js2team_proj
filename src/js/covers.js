@@ -188,6 +188,22 @@ function lineMarkupTemplate(arr) {
                             <div class="marquee_picture">
                                 <picture>
                                     <source media="(min-width: 1440px)" srcset="
+                                    ${arr[12]} 1x,
+                                    ${arr[13]} 2x" />
+                                    <source media="(min-width: 768px)" srcset="
+                                    ${arr[12]} 1x,
+                                     ${arr[13]} 2x" />
+                                    <source media="(max-width: 767px)" srcset="
+                                    ${arr[12]} 1x,
+                                    ${arr[13]} 2x" />
+                                    <img class="project-pic" src="
+                                    ${arr[12]}" alt="website" width="282"
+                                        height="162" loading="lazy" />
+                                </picture></div></li>
+                        <li class="marquee__line animate line1">
+                            <div class="marquee_picture">
+                                <picture>
+                                    <source media="(min-width: 1440px)" srcset="
                                     ${arr[14]} 1x,
                                     ${arr[15]} 2x" />
                                     <source media="(min-width: 768px)" srcset="
