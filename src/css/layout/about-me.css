@@ -126,10 +126,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.about-circle:hover,
+.about-circle:focus {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .about-ac-icon {
   stroke: var(--text);
+  fill: transparent;
   transition: var(--transition);
 }
 
@@ -260,7 +271,11 @@
 }
 
 .about-skills-swiper .is-first {
-  background-color: var(--accent-color);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
   border: none;
 }
 
@@ -306,7 +321,7 @@
 .theme-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 32px;
 }
 
@@ -319,43 +334,43 @@
 }
 
 .theme-red {
-  background-color: #ed3b44;
+  background: radial-gradient(circle, #ed3b44 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-red:hover {
-  background-color: #e0373f;
+  background: radial-gradient(circle, #e0373f 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-yellow {
-  background-color: #c6e327;
+  background: radial-gradient(circle, #c6e327 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-yellow:hover {
-  background-color: #9ab504;
+  background: radial-gradient(circle, #b6d507 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-orange {
-  background-color: #ff7f08;
+  background: radial-gradient(circle, #ff7f08 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-orange:hover {
-  background-color: #cf6707;
+  background: radial-gradient(circle, #cf6707 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-green {
-  background-color: #2b4441;
+  background: radial-gradient(circle, #2b4441 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-green:hover {
-  background-color: #1a322f;
+  background: radial-gradient(circle, #1a322f 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-blue {
-  background-color: #0041e8;
+  background: radial-gradient(circle, #0041e8 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-blue:hover {
-  background-color: #0138c4;
+  background: radial-gradient(circle, #0138c4 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 @media screen and (min-width: 1440px) {
