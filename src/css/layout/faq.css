@@ -43,6 +43,11 @@
 .circle-faq:focus {
   border-color: var(--text);
   transition: var(--transition);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .icon-faq {
