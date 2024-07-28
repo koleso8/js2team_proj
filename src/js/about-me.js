@@ -55,7 +55,7 @@ function factsAboutMeTemplate(array) {
     <h3 class="ac-header" id="about-ac-header">
       <button type="button" class="ac-trigger" id="about-ac-trigger">
       ${item.title}
-       <span class="about-circle"><svg class="about-ac-icon" width="10" height="5">
+       <span class="about-circle"><svg class="about-ac-icon" width="12" height="8">
                 <use href="${svg}#arrowDown"></use>
               </svg>
               </span>
