@@ -12,10 +12,14 @@ const buttonOrangeEl = document.querySelector('.theme-orange');
 const buttonGreenEl = document.querySelector('.theme-green');
 const buttonBlueEl = document.querySelector('.theme-blue');
 const bodyEl = document.querySelector('body');
+const chooseThemeBtnEl = document.querySelector('.choose-theme-btn');
+const themeButtonsEl = document.querySelector('.theme-buttons');
 
 function changeTheme(themeClass) {
   bodyEl.classList = '';
   bodyEl.classList.add(themeClass);
+  chooseThemeBtnEl.classList.remove('hidden');
+  themeButtonsEl.classList.add('hidden');
 }
 
 buttonRedEl.addEventListener('click', () => {
@@ -41,4 +45,9 @@ buttonGreenEl.addEventListener('click', () => {
 buttonBlueEl.addEventListener('click', () => {
   changeTheme('blue');
   blueAnimation();
+});
+
+chooseThemeBtnEl.addEventListener('click', () => {
+  themeButtonsEl.classList.remove('hidden');
+  chooseThemeBtnEl.classList.add('hidden');
 });
