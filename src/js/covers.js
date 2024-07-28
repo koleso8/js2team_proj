@@ -60,54 +60,7 @@ let coversList = [
   image10_2x,
 ];
 
-// function addImg(array) {
-//   const ulElement = document.createElement('ul');
-//   ulElement.classList.add('marquee__inner');
-
-//   array.forEach(coversItem => {
-//     const liElement = document.createElement('li');
-//     liElement.classList.add('marquee__line', 'animate', 'line1');
-
-//     const divElement = document.createElement('div');
-//     divElement.classList.add('marquee_picture');
-
-//     const pictureElement = document.createElement('picture');
-
-//     const sourceElement1 = document.createElement('source');
-//     sourceElement1.media = '(min-width: 1440px)';
-//     sourceElement1.srcset = `${array[0]} 1x, ${array[1]} 2x`;
-
-//     const sourceElement2 = document.createElement('source');
-//     sourceElement2.media = '(min-width: 768px)';
-//     sourceElement2.srcset = `${array[0]} 1x, ${array[1]} 2x`;
-
-//     const sourceElement3 = document.createElement('source');
-//     sourceElement3.media = '(max-width: 767px)';
-//     sourceElement3.srcset = `${array[0]} 1x, ${array[1]} 2x`;
-
-//     const imgElement = document.createElement('img');
-//     imgElement.classList.add('project-pic');
-//     imgElement.src = array[0];
-//     imgElement.alt = 'website';
-//     imgElement.width = 282;
-//     imgElement.height = 162;
-//     imgElement.loading = 'lazy';
-
-//     pictureElement.appendChild(sourceElement1);
-//     pictureElement.appendChild(sourceElement2);
-//     pictureElement.appendChild(sourceElement3);
-//     pictureElement.appendChild(imgElement);
-
-//     divElement.appendChild(pictureElement);
-//     liElement.appendChild(divElement);
-//     ulElement.appendChild(liElement);
-//   });
-
-//   addImg(coversList);
-// }
-
 function lineMarkupTemplate(arr) {
-  return arr.map(item => {
     return `
        <div class="marquee">
         <ul class="marquee__inner">
@@ -287,8 +240,7 @@ function lineMarkupTemplate(arr) {
                     </ul>
                 </div>
             </div>`;
-  });
-}
+  };
 
 //  .join('');
 // function renderCoversLine(arr) {
@@ -301,22 +253,22 @@ document.querySelector('.background-circle3').innerHTML =
 
 // renderCoversLine(coversList);
 
-const coversSection = document.querySelector('.covers');
-const line = document.querySelectorAll('.marquee__line');
+// const coversSection = document.querySelector('.covers');
+// const line = document.querySelectorAll('.marquee__line');
 
-function onEntry(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      line.forEach(line => line.classList.add('animate'));
-    } else {
-      line.forEach(line => line.classList.remove('animate'));
-    }
-  });
-}
+// function onEntry(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       line.forEach(line => line.classList.add('animate'));
+//     } else {
+//       line.forEach(line => line.classList.remove('animate'));
+//     }
+//   });
+// }
 
-let options = {
-  threshold: 0,
-};
+// let options = {
+//   threshold: 0,
+// };
 
-let observer = new IntersectionObserver(onEntry, options);
-observer.observe(coversSection);
+// let observer = new IntersectionObserver(onEntry, options);
+// observer.observe(coversSection);

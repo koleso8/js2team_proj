@@ -97,11 +97,11 @@
 }
 
 .line1 {
-  animation: marqueeLine1 45s ease-in-out infinite;
+  animation: marqueeLine1 25s ease-in-out infinite;
 }
 
 .line2 {
-  animation: marqueeLine2 45s ease-in-out infinite;
+  animation: marqueeLine2 25s ease-in-out infinite;
 }
 
 @keyframes marqueeLine1 {
