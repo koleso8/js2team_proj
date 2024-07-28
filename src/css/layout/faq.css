@@ -41,7 +41,6 @@
 }
 .circle-faq:hover,
 .circle-faq:focus {
-  border-color: var(--text);
   transition: var(--transition);
   background: radial-gradient(
     circle,
@@ -51,6 +50,7 @@
 }
 
 .icon-faq {
+  fill: transparent;
   stroke: var(--text);
   transition: var(--transition);
 }
