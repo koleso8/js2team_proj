@@ -61,7 +61,6 @@ let coversList = [
 ];
 
 function lineMarkupTemplate(arr) {
-  return arr.map(item => {
     return `
        <div class="marquee">
         <ul class="marquee__inner">
@@ -73,10 +72,10 @@ function lineMarkupTemplate(arr) {
                                     ${arr[1]} 2x" />
     <source media="(min-width: 768px)" srcset=" 
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x "/>
+                                    ${arr[1]} 2x" />
      <source media="(max-width: 767px)" srcset="
                                     ${arr[0]} 1x,
-                                    ${arr[1]} 2x "/>
+                                    ${arr[1]} 2x" />
       <img class="project-pic" src="
       ${arr[0]}" alt="website" width="282" height="162" loading="lazy"/> </picture> </div> </li>
                         <li class="marquee__line animate line1">
@@ -241,10 +240,9 @@ function lineMarkupTemplate(arr) {
                     </ul>
                 </div>
             </div>`;
-  });
-  // .join('');
-}
+  };
 
+//  .join('');
 // function renderCoversLine(arr) {
 //   const markup = lineMarkupTemplate(arr);
 //   document.querySelector('.background-circle3').innerHTML = markup;
@@ -255,22 +253,22 @@ document.querySelector('.background-circle3').innerHTML =
 
 // renderCoversLine(coversList);
 
-const coversSection = document.querySelector('.covers');
-const line = document.querySelectorAll('.marquee__line');
+// const coversSection = document.querySelector('.covers');
+// const line = document.querySelectorAll('.marquee__line');
 
-function onEntry(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      line.forEach(line => line.classList.add('animate'));
-    } else {
-      line.forEach(line => line.classList.remove('animate'));
-    }
-  });
-}
+// function onEntry(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       line.forEach(line => line.classList.add('animate'));
+//     } else {
+//       line.forEach(line => line.classList.remove('animate'));
+//     }
+//   });
+// }
 
-let options = {
-  threshold: 0,
-};
+// let options = {
+//   threshold: 0,
+// };
 
-let observer = new IntersectionObserver(onEntry, options);
-observer.observe(coversSection);
+// let observer = new IntersectionObserver(onEntry, options);
+// observer.observe(coversSection);
