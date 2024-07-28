@@ -1,188 +1,214 @@
 .covers {
-    margin: 32px 0 32px;
-    position: relative;
-    overflow: hidden;
-    height: 508px;
-    min-width: 320px;
-    background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 508px;
+  min-width: 320px;
+  background-size: cover;
+  width: 100%;
 }
 
 .covers-projects {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: clip;
-    gap: 24px;
-    top: -30px;
-    right: 0;
-    left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+  gap: 24px;
+  top: -30px;
+  right: 0;
+  left: 0;
 }
 
-/* шо тут у нас? */
-/* .covers .container {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: flex;
-} */
-
+.covers {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
 
 .marquee__inner {
-    display: flex;
-    transform: rotate(16deg);
-    gap: 24px;
-    margin-bottom: 24px;
+  display: flex;
+  transform: rotate(16deg);
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .marquee_picture {
-    height: 100%;
+  height: 100%;
 }
-
-
 
 /* circle */
 .background-circle1,
 .background-circle2,
 .background-circle3 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--background-color);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
 }
 
 .background-circle1::before,
 .background-circle2::before,
 .background-circle3::before {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
-    background-color: var(--accent-color);
-    opacity: 0.6;
-    filter: blur(172px);
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: var(--accent-color);
+  opacity: 0.6;
+  filter: blur(50px);
+  animation: pulse 15s ease-in-out infinite, slideLeft 10s linear infinite, fadeIn 3s ease-in 3s, fadeOut 3s ease-out 3s;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: translate(-150%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-70%, -100%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-270%, -270%) scale(1);
+    opacity: 1;
+  }
+}
+
+
 .background-circle1::before {
-    top: 198px;
-    left: 0;
+  top: 198px;
+  left: 120px;
 }
 
 .background-circle2::before {
-    top: 0;
-    left: 428px;
+  top: 400px;
+  left: 1200px;
 }
 
 .background-circle3::before {
-    top: 714px;
-    left: 1178px;
+  top: 60%;
+  right: 25%;
 }
 
 .marquee__line {
-    flex-shrink: 0;
-    overflow: hidden;
-    display: block;
-    width: 282px;
-    height: 162px;
-    object-fit: cover;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: block;
+  width: 282px;
+  height: 162px;
+  object-fit: cover;
 }
 
 .animate {
-    animation-name: marqueeLine;
-    animation-duration: 60s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
+  animation-name: marqueeLine;
+  animation-duration: 60s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .project-pic {
-    height: 100%;
+  height: 100%;
 }
 
-
 .line1 {
-    animation: marqueeLine1 45s ease-in-out infinite;
+  animation: marqueeLine1 25s ease-in-out infinite;
 }
 
 .line2 {
-    animation: marqueeLine2 45s ease-in-out infinite;
-
+  animation: marqueeLine2 25s ease-in-out infinite;
 }
 
 @keyframes marqueeLine1 {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    35% {
-        transform: translateX(-55%);
-    }
+  35% {
+    transform: translateX(-35%);
+  }
 
-    65% {
-        transform: translateX(55%);
-    }
+  65% {
+    transform: translateX(15%);
+  }
 
-    100% {
-        transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes marqueeLine2 {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-25%);
+  }
 
-    35% {
-        transform: translateX(55%);
-    }
+  35% {
+    transform: translateX(5%);
+  }
 
-    65% {
-        transform: translateX(-55%);
-    }
+  65% {
+    transform: translateX(-20%);
+  }
 
-    100% {
-        transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-
 @media only screen and (min-width: 768px) {
-    .covers {
-        margin: 48px 0 48px;
-        height: 960px;
-    }
+  .covers {
+    margin: 48px 0 48px;
+    height: 960px;
+  }
 
-    .projects {
-        top: -40px;
-        gap: 44p;
-    }
+  .covers-projects {
+    top: -40px;
+    gap: 44px;
+  }
 
-    .marquee__inner {
-        gap: 44px;
-        margin-bottom: 46px;
-    }
+  .marquee__inner {
+    gap: 44px;
+    margin-bottom: 46px;
+  }
 
-    .marquee__line {
-        width: 544px;
-        height: 314px;
-    }
+  .marquee__line {
+    width: 544px;
+    height: 314px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-    .covers {
-        margin: 82px 0 82px;
-    }
+  .covers {
+    margin: 82px 0 82px;
+  }
 
-    .projects {
-        gap: 64px;
-    }
+  .covers-projects {
+    gap: 64px;
+  }
 
-    .marquee__inner {
-        gap: 64px;
-        margin-bottom: 48px;
-    }
-
-
+  .marquee__inner {
+    gap: 64px;
+    margin-bottom: 48px;
+  }
 }

@@ -38,9 +38,6 @@
   border-radius: 24px;
 }
 
-@media screen and (min-width: 375px) {
-}
-
 @media screen and (min-width: 768px) {
   .about-me {
     padding-bottom: 48px;
@@ -70,6 +67,7 @@
 @media screen and (min-width: 1440px) {
   .about-me {
     padding-bottom: 82px;
+    padding-top: 48px;
   }
 
   .about-wrapper {
@@ -87,6 +85,9 @@
 }
 
 /* #region Accordion */
+.about-me-accordion-container {
+  margin-bottom: 32px;
+}
 
 #about-ac {
   background-color: inherit;
@@ -125,10 +126,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.about-circle:hover,
+.about-circle:focus {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .about-ac-icon {
   stroke: var(--text);
+  fill: transparent;
   transition: var(--transition);
 }
 
@@ -156,6 +168,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .about-me-accordion-container {
+    margin-bottom: 64px;
+  }
+
   #about-ac {
     padding-bottom: 32px;
   }
@@ -175,6 +191,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .about-me-accordion-container {
+    margin-bottom: 64px;
+  }
+
   #about-ac {
     margin-bottom: 32px;
     padding-bottom: 32px;
@@ -194,4 +214,168 @@
     max-width: 465px;
   }
 }
-/*#endregion Accordion */
+/* #endregion Accordion */
+
+/* #region Swiper */
+
+.about-me-skills {
+  position: relative;
+}
+
+.about-skills-swiper {
+  width: 260px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 32px;
+  overflow: hidden;
+  transition: 1000ms cubic-bezier(0.41, 0.6, 0.52, 0.93);
+}
+
+.about-skills-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.about-skills-swiper .swiper-slide {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  width: 130px !important;
+  height: 130px !important;
+  flex-shrink: 0;
+  border-radius: 100%;
+  border: 1px solid var(--circle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.about-swiper-button-next {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.about-skills-swiper .is-first {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
+  border: none;
+}
+
+.about-swiper-icon {
+  fill: none;
+  stroke: var(--arrow);
+}
+
+@media screen and (min-width: 768px) {
+  .about-skills-swiper {
+    margin-bottom: 48px;
+    width: 600px;
+  }
+
+  .about-skills-swiper .swiper-slide {
+    font-size: 20px;
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .about-swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-swiper-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-skills-swiper {
+    margin-bottom: 82px;
+    width: 1200px;
+  }
+}
+
+/* #endregion Swiper */
+
+/* #region theme */
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.theme {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.theme-red {
+  background: radial-gradient(circle, #ed3b44 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-red:hover {
+  background: radial-gradient(circle, #e0373f 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-yellow {
+  background: radial-gradient(circle, #c6e327 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-yellow:hover {
+  background: radial-gradient(circle, #b6d507 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-orange {
+  background: radial-gradient(circle, #ff7f08 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-orange:hover {
+  background: radial-gradient(circle, #cf6707 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-green {
+  background: radial-gradient(circle, #2b4441 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-green:hover {
+  background: radial-gradient(circle, #1a322f 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-blue {
+  background: radial-gradient(circle, #0041e8 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-blue:hover {
+  background: radial-gradient(circle, #0138c4 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+@media screen and (min-width: 1440px) {
+  .theme-buttons {
+    margin-bottom: 48px;
+  }
+}
+/* #endregion theme */

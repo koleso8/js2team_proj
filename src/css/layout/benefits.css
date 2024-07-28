@@ -54,8 +54,12 @@
 }
 .benefits-btn:hover,
 .benefits-btn:focus {
-  border: 1px solid var(--text);
   transition: var(--transition);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 @media only screen and (min-width: 1440px) {
@@ -74,25 +78,9 @@
   border-radius: 10px;
   background-color: var(--accent-color);
 }
-/* 
-.bg-icon .red {
-  background-color: var(--accent-color);
-}
-.bg-icon .red .icon-ben {
-  stroke: var(--text) !important;
-}
-.bg-icon .yellow {
-  background-color: yellow;
-}
-.bg-icon .yellow .icon-ben {
-  stroke: var(--background) !important;
-}
-.bg-icon .orange {
-  background-color: orange;
-} */
 
 .icon-ben {
-  stroke: var(--text);
+  stroke: var(--accent-stroke);
   fill: transparent;
 }
 
