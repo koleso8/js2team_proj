@@ -126,10 +126,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.about-circle:hover,
+.about-circle:focus {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .about-ac-icon {
   stroke: var(--text);
+  fill: transparent;
   transition: var(--transition);
 }
 
@@ -260,7 +271,11 @@
 }
 
 .about-skills-swiper .is-first {
-  background-color: var(--accent-color);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
   border: none;
 }
 
@@ -300,3 +315,67 @@
 }
 
 /* #endregion Swiper */
+
+/* #region theme */
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.theme {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.theme-red {
+  background: radial-gradient(circle, #ed3b44 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-red:hover {
+  background: radial-gradient(circle, #e0373f 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-yellow {
+  background: radial-gradient(circle, #c6e327 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-yellow:hover {
+  background: radial-gradient(circle, #b6d507 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-orange {
+  background: radial-gradient(circle, #ff7f08 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-orange:hover {
+  background: radial-gradient(circle, #cf6707 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-green {
+  background: radial-gradient(circle, #2b4441 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-green:hover {
+  background: radial-gradient(circle, #1a322f 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-blue {
+  background: radial-gradient(circle, #0041e8 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.theme-blue:hover {
+  background: radial-gradient(circle, #0138c4 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+@media screen and (min-width: 1440px) {
+  .theme-buttons {
+    margin-bottom: 48px;
+  }
+}
+/* #endregion theme */
