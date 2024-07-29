@@ -14,3 +14,5 @@ import './js/modal';
 import './js/animation';
 import './js/change-theme';
 import './js/images';
+import './js/three.min';
+import './js/vanta.net.min';
