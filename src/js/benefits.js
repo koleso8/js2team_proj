@@ -1,5 +1,5 @@
+import './vanta-conn';
 import svg from '../images/svg/icons.svg';
-
 const refs = {
   listEl: document.querySelector('.benefits-list'),
 };
