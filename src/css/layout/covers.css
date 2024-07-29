@@ -6,6 +6,8 @@
   min-width: 320px;
   background-size: cover;
   width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .covers-projects {
@@ -16,14 +18,8 @@
   align-items: center;
   overflow: clip;
   gap: 24px;
-  top: -30px;
   right: 0;
   left: 0;
-}
-
-.covers {
-  padding-top: 82px;
-  padding-bottom: 82px;
 }
 
 .marquee__inner {
@@ -178,12 +174,12 @@
 
 @media only screen and (min-width: 768px) {
   .covers {
-    margin: 48px 0 48px;
     height: 960px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .covers-projects {
-    top: -40px;
     gap: 44px;
   }
 
@@ -200,7 +196,7 @@
 
 @media only screen and (min-width: 1440px) {
   .covers {
-    margin: 82px 0 82px;
+    padding: 82px 0 82px;
   }
 
   .covers-projects {
