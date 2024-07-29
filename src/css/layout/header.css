@@ -361,15 +361,14 @@
   border-radius: 60px;
   background: var(--accent-color);
   transition: background var(--transition);
-
-  .mob-order-btn:hover {
-    background: var(--accent-color-hover);
-  }
-
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+}
+
+.mob-order-btn:hover {
+  background: var(--accent-color-hover);
 }
 
 .mob-menu-backdrop {

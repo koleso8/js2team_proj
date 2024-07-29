@@ -39,7 +39,6 @@ container {
   flex-direction: column;
   width: 100%;
 }
-
 .email {
   display: flex;
   color: rgba(250, 250, 250, 0.4);
