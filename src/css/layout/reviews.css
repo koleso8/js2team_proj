@@ -86,7 +86,7 @@ container {
   stroke: var(--text);
 }
 
-.reviews-icon.disabled {
+.swiper-button-disabled svg {
   fill: transparent;
   stroke: var(--arrow);
 }
