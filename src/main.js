@@ -1,7 +1,5 @@
 import './js/API_reviews';
 import './js/about-me';
-import './js/three.min';
-import './js/vanta.net.min';
 import './js/covers';
 import './js/faq';
 import './js/header';
