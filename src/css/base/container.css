@@ -3,14 +3,8 @@
 
   padding: 0 16px;
   margin: 0 auto;
-
-  /* background-color: aqua; */
-  /* height: 20px; */
+  transition: var(--transition);
 }
-
-/* main {
-  padding-top: 74px;
-} */
 
 @media screen and (min-width: 375px) {
   .container {

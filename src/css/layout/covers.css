@@ -10,7 +10,7 @@
   padding-bottom: 32px;
 }
 
-.covers-div{
+.covers-div {
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -45,7 +45,6 @@
 .background-circle3 {
   position: relative;
   width: 100%;
-  height: 100vh;
   background-color: var(--background-color);
 }
 
@@ -60,7 +59,8 @@
   background-color: var(--accent-color);
   opacity: 0.6;
   filter: blur(50px);
-  animation: pulse 15s ease-in-out infinite, slideLeft 10s linear infinite, fadeIn 3s ease-in 3s, fadeOut 3s ease-out 3s;
+  animation: pulse 15s ease-in-out infinite, slideLeft 10s linear infinite,
+    fadeIn 3s ease-in 3s, fadeOut 3s ease-out 3s;
 }
 
 @keyframes fadeIn {
@@ -81,7 +81,6 @@
   }
 }
 
-
 @keyframes pulse {
   0% {
     transform: translate(-150%, -50%) scale(1);
@@ -96,7 +95,6 @@
     opacity: 1;
   }
 }
-
 
 .background-circle1::before {
   top: 198px;
