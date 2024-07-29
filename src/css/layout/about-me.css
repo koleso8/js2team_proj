@@ -140,6 +140,7 @@
     var(--accent-color) 0%,
     rgba(2, 0, 36, 0) 100%
   );
+  transition: var(--transition);
 }
 
 .about-ac-icon {
@@ -280,6 +281,7 @@
     var(--accent-color) 0%,
     rgba(2, 0, 36, 0) 100%
   );
+  transition: var(--transition);
   border: none;
 }
 
@@ -329,8 +331,8 @@
   align-items: center;
   gap: 10px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   z-index: 900;
 }
 

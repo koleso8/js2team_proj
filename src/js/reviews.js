@@ -37,7 +37,7 @@ const defaultOptions = {
     theme: 'os-theme-light',
     visibility: 'auto',
     autoHide: 'scroll',
-    autoHideDelay: 100,
+    autoHideDelay: 1000,
     autoHideSuspend: false,
     dragScroll: true,
     clickScroll: false,
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiper = new Swiper('.reviews-swiper', {
     modules: [Navigation, Scrollbar],
-    speed: 500,
+    speed: 1000,
 
     navigation: {
       nextEl: '.reviews-swiper-button-next',
