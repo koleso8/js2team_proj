@@ -25,16 +25,7 @@ container {
 }
 
 .work-together-accent {
-  color: #ed3b44;
-}
-.work-together-text {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: #fafafa;
+  color: var(--accent-color);
 }
 
 .work-together-form {
@@ -52,22 +43,27 @@ container {
   display: flex;
   color: rgba(250, 250, 250, 0.4);
   background-color: #1c1d20;
-  display: flex;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  margin-bottom: 16px;
+
   height: 44px;
+  outline: none;
 }
 .email::placeholder {
+  padding: 0;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  padding-bottom: 20px;
+}
+.email:hover,
+.email:focus {
+  color: #fafafa;
+  border-bottom: 1px solid #fafafa;
 }
 
 .comments {
@@ -78,8 +74,8 @@ container {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  margin-bottom: 32px;
   height: 44px;
+  outline: none;
 }
 .comments::placeholder {
   font-family: 'Inter Tight', sans-serif;
@@ -90,6 +86,13 @@ container {
   color: rgba(250, 250, 250, 0.6);
   padding-bottom: 20px;
 }
+
+.comments:hover,
+.comments:focus {
+  color: #fafafa;
+  border-bottom: 1px solid #fafafa;
+}
+
 .work-together-button {
   width: 100px;
   height: 100px;
@@ -101,6 +104,7 @@ container {
   font-size: 16px;
   letter-spacing: -0.02em;
   color: var(--text);
+  margin-top: 32px;
 }
 
 .work-together-nav {
@@ -110,6 +114,13 @@ container {
 .work-together-address {
   display: flex;
 }
+@media screen and (max-width: 374px) {
+  .work-together-address {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
 .work-together-address-email {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -162,20 +173,33 @@ container {
   .work-together-wrapper {
     width: 542px;
     margin-top: 80px;
-    margin-bottom: 64px;
+    margin-bottom: 18px;
   }
 
   .work-together-title {
     font-size: 64px;
   }
 
-  .work-together-text {
-    font-size: 64px;
-  }
-
   .form {
     flex-direction: row;
-    justify-content: space-between;
+
+    align-items: center;
+  }
+
+  .email {
+    margin-right: 32px;
+    width: 245px;
+  }
+
+  .comments {
+    margin-right: 32px;
+    width: 245px;
+  }
+
+  .work-together-button {
+    width: 150px;
+    height: 150px;
+    margin-top: 0px;
   }
 
   .work-together-nav {
@@ -199,10 +223,12 @@ container {
   .work-together .container {
     margin-left: 164px;
   }
-}
+  .email {
+    width: 390px;
+  }
 
-.valid {
-  border: 10px solid green;
-}
-.invalid {
+  .comments {
+    margin-right: 86px;
+    width: 390px;
+  }
 }
