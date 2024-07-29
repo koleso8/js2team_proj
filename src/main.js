@@ -11,8 +11,5 @@ import './js/modal';
 import './js/animation';
 import './js/change-theme';
 import './js/images';
-<<<<<<< Updated upstream
 import './js/benefits';
-=======
 import './js/scroll';
->>>>>>> Stashed changes
