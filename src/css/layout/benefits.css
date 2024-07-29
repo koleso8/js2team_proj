@@ -54,7 +54,6 @@
 }
 .benefits-btn:hover,
 .benefits-btn:focus {
-  border: 1px solid var(--text);
   transition: var(--transition);
   background: radial-gradient(
     circle,

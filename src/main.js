@@ -1,6 +1,5 @@
 import './js/API_reviews';
 import './js/about-me';
-import './js/benefits';
 import './js/covers';
 import './js/faq';
 import './js/header';
@@ -10,5 +9,6 @@ import './js/reviews';
 import './js/work-together';
 import './js/modal';
 import './js/animation';
-import './js/chenge-theme';
+import './js/change-theme';
 import './js/images';
+import './js/benefits';

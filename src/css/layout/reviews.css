@@ -1,0 +1,144 @@
+container {
+  width: 100%;
+}
+
+.reviews-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.reviews-item img {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+}
+
+.reviews-item h3 {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+
+.reviews-list {
+  margin-bottom: 32px;
+}
+
+.reviews-item {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+}
+
+.reviews-item p {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.reviews-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviews-swiper-button-prev {
+  display: flex;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.reviews-swiper-button-next {
+  display: flex;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.reviews-icon {
+  border: transparent;
+  outline: transparent;
+  fill: transparent;
+  stroke: var(--arrow);
+}
+
+@media screen and (max-width: 320px) {
+  /* .container {
+    max-width: 375px;
+  } */
+  .reviews {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .work-together-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+  }
+
+  .work-together-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .reviews {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .reviews-swiper-button-prev {
+    padding: 18px;
+  }
+  .reviews-swiper-button-next {
+    padding: 18px;
+  }
+
+  .reviews-arrow {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+  .reviews {
+    margin-top: 164px;
+    margin-bottom: 164px;
+  }
+}
