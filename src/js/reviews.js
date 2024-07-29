@@ -4,6 +4,8 @@ import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { getReviews } from './API_reviews'
 
 const reviewsList = document.querySelector('.reviews-list');
+const prevBtnEl = document.querySelector('.reviews-icon-prev');
+const nextBtnEl = document.querySelector('.reviews-icon-next');
 
 
 async function makeReviews() {
@@ -31,8 +33,14 @@ function renderReviews(reviews) {
     reviewsList.insertAdjacentHTML('beforeend', markup);
 }
 
-const swiper = new Swiper('.reviews-swiper', {
-  modules: [Navigation, Scrollbar],
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  
+
+  const swiper = new Swiper('.reviews-swiper', {
+    modules: [Navigation, Scrollbar],
     speed: 500,
   
      navigation: {
@@ -52,11 +60,45 @@ const swiper = new Swiper('.reviews-swiper', {
       slidesPerView: 4,
       spaceBetween: 16
     }
+   }
+  });
+
+  function updateNavigationButtons() {
+    
+    if (swiper.isBeginning) {
+      prevBtnEl.classList.add('disabled');
+      
+
+    } else {
+      prevBtnEl.classList.remove('disabled');
+    }
+
+    if (swiper.isEnd) {
+      nextBtnEl.classList.add('disabled');
+    } else {
+     nextBtnEl.classList.remove('disabled');
+    }
   }
 
+  
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight') {
+      swiper.slideNext(1000);
+    } else if (event.key === 'ArrowLeft') {
+      swiper.slidePrev(1000);
+    } else if (event.key === 'Tab') {
+      event.preventDefault();
+      if (event.shiftKey) {
+        swiper.slidePrev(1000);
+      } else {
+        swiper.slideNext(1000);
+      }
+    }
+  });
+  swiper.on('slideChange', updateNavigationButtons);
+  updateNavigationButtons();
 });
-
-
 
 
 
