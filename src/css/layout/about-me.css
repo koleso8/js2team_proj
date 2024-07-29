@@ -103,6 +103,10 @@
   margin-bottom: 0px;
 }
 
+#about-ac:first-child #about-ac-text:first-child {
+  margin-bottom: 32px;
+}
+
 #about-ac-header .ac-trigger {
   font-family: var(--font-family);
   font-weight: 600;
@@ -325,8 +329,8 @@
   align-items: center;
   gap: 10px;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   z-index: 900;
 }
 
