@@ -6,6 +6,10 @@ import {
   ClickScrollPlugin,
 } from 'overlayscrollbars';
 
+OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+OverlayScrollbars.plugin(SizeObserverPlugin);
+OverlayScrollbars.plugin(ClickScrollPlugin);
+
 document.addEventListener('DOMContentLoaded', () => {
   const defaultOptions = {
     paddingAbsolute: false,
@@ -24,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       theme: 'os-theme-dark',
       visibility: 'auto',
       autoHide: 'scroll',
-      autoHideDelay: 2000,
+      autoHideDelay: 1500,
       autoHideSuspend: false,
       dragScroll: true,
-      clickScroll: true,
+      clickScroll: false,
       pointers: ['mouse', 'touch', 'pen'],
     },
   };
