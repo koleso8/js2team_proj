@@ -10,6 +10,12 @@
   padding-bottom: 32px;
 }
 
+.covers-div{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
 .covers-projects {
   position: absolute;
   display: flex;
