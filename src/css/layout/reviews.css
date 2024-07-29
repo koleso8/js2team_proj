@@ -1,10 +1,6 @@
-container {
-  width: 100%;
-}
-
 .reviews {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 48px;
 }
 
 .reviews-title {
@@ -113,12 +109,9 @@ container {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
   .reviews {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 64px;
   }
 
   .reviews-swiper-button-prev {
@@ -134,11 +127,8 @@ container {
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
   .reviews {
     padding-top: 82px;
-    padding-bottom: 82px;
+    padding-bottom: 164px;
   }
 }
