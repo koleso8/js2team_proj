@@ -56,7 +56,7 @@ function renderItems(array) {
 
 renderItems(benList);
 
-const effect = VANTA.NET({
+const effect = await VANTA.NET({
   mouseControls: true,
   touchControls: true,
   gyroControls: true,
