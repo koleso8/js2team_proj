@@ -62,26 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
    }
   });
-
-  function updateNavigationButtons() {
-    
-    if (swiper.isBeginning) {
-      prevBtnEl.classList.add('disabled');
-      
-
-    } else {
-      prevBtnEl.classList.remove('disabled');
-    }
-
-    if (swiper.isEnd) {
-      nextBtnEl.classList.add('disabled');
-    } else {
-     nextBtnEl.classList.remove('disabled');
-    }
-  }
-
-  
-
   document.addEventListener('keydown', event => {
     if (event.key === 'ArrowRight') {
       swiper.slideNext(1000);
@@ -96,8 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  swiper.on('slideChange', updateNavigationButtons);
-  updateNavigationButtons();
+ 
 });
 
 
