@@ -1,5 +1,5 @@
 .covers {
-  margin: 32px 0 32px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   height: 508px;
@@ -52,22 +52,58 @@
 .background-circle3::before {
   content: '';
   position: absolute;
-  width: 175px;
-  height: 175px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   background-color: var(--accent-color);
   opacity: 0.6;
-  filter: blur(100px);
+  filter: blur(50px);
+  animation: pulse 15s ease-in-out infinite, slideLeft 10s linear infinite, fadeIn 3s ease-in 3s, fadeOut 3s ease-out 3s;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: translate(-150%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-70%, -100%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-270%, -270%) scale(1);
+    opacity: 1;
+  }
+}
+
 
 .background-circle1::before {
   top: 198px;
-  left: 0;
+  left: 120px;
 }
 
 .background-circle2::before {
-  top: 0;
-  left: 428px;
+  top: 400px;
+  left: 1200px;
 }
 
 .background-circle3::before {
