@@ -1,4 +1,6 @@
 import svg from '../images/svg/icons.svg';
+import './three.min';
+import './vanta.net.min';
 
 const refs = {
   listEl: document.querySelector('.benefits-list'),
