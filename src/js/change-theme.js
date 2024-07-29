@@ -18,8 +18,8 @@ const themeButtonsEl = document.querySelector('.theme-buttons');
 function changeTheme(themeClass) {
   bodyEl.classList = '';
   bodyEl.classList.add(themeClass);
-  chooseThemeBtnEl.classList.remove('hidden');
-  themeButtonsEl.classList.add('hidden');
+  chooseThemeBtnEl.classList.remove('hidden-btn');
+  themeButtonsEl.classList.add('hidden-btn');
 }
 
 buttonRedEl.addEventListener('click', () => {
@@ -48,6 +48,6 @@ buttonBlueEl.addEventListener('click', () => {
 });
 
 chooseThemeBtnEl.addEventListener('click', () => {
-  themeButtonsEl.classList.remove('hidden');
-  chooseThemeBtnEl.classList.add('hidden');
+  themeButtonsEl.classList.remove('hidden-btn');
+  chooseThemeBtnEl.classList.add('hidden-btn');
 });
