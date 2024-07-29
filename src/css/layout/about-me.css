@@ -126,10 +126,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
+}
+
+.about-circle:hover,
+.about-circle:focus {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
 }
 
 .about-ac-icon {
   stroke: var(--text);
+  fill: transparent;
   transition: var(--transition);
 }
 
@@ -260,7 +271,11 @@
 }
 
 .about-skills-swiper .is-first {
-  background-color: var(--accent-color);
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
   border: none;
 }
 
@@ -303,11 +318,22 @@
 
 /* #region theme */
 
+.theme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 900;
+}
+
 .theme-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 32px;
+  gap: 10px;
 }
 
 .theme {
@@ -323,7 +349,7 @@
 }
 
 .theme-red:hover {
-  background-color: #e0373f;
+  background: radial-gradient(circle, #ed3b44 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-yellow {
@@ -331,7 +357,7 @@
 }
 
 .theme-yellow:hover {
-  background-color: #9ab504;
+  background: radial-gradient(circle, #c6e327 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-orange {
@@ -339,7 +365,7 @@
 }
 
 .theme-orange:hover {
-  background-color: #cf6707;
+  background: radial-gradient(circle, #ff7f08 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-green {
@@ -347,7 +373,7 @@
 }
 
 .theme-green:hover {
-  background-color: #1a322f;
+  background: radial-gradient(circle, #2b4441 0%, rgba(2, 0, 36, 0) 100%);
 }
 
 .theme-blue {
@@ -355,12 +381,40 @@
 }
 
 .theme-blue:hover {
-  background-color: #0138c4;
+  background: radial-gradient(circle, #0041e8 0%, rgba(2, 0, 36, 0) 100%);
+}
+
+.choose-theme-btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 0;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--title);
+  position: relative;
+  transition: background-color (--transition);
+  border: 1px solid var(--circle);
+  border-radius: 60px;
+  padding: 10px;
+  display: flex;
+}
+
+.choose-theme-btn:hover,
+.choose-theme-btn:focus {
+  background: radial-gradient(
+    circle,
+    var(--accent-color) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
+  color: var(--text);
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 1440px) {
-  .theme-buttons {
-    margin-bottom: 48px;
-  }
 }
 /* #endregion theme */

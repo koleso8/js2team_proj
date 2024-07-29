@@ -1,5 +1,5 @@
+import './vanta-conn';
 import svg from '../images/svg/icons.svg';
-
 const refs = {
   listEl: document.querySelector('.benefits-list'),
 };
@@ -54,7 +54,7 @@ function renderItems(array) {
 
 renderItems(benList);
 
-const effect = VANTA.NET({
+const effect = await VANTA.NET({
   mouseControls: true,
   touchControls: true,
   gyroControls: true,
@@ -73,6 +73,7 @@ export function redAnimation() {
     color: 0xed3b44,
   });
 }
+
 export function yellowAnimation() {
   effect.setOptions({
     color: 0xc6e327,
