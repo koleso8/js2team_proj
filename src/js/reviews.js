@@ -37,7 +37,7 @@ const defaultOptions = {
     theme: 'os-theme-light',
     visibility: 'auto',
     autoHide: 'scroll',
-    autoHideDelay: 1000,
+    autoHideDelay: 100,
     autoHideSuspend: false,
     dragScroll: true,
     clickScroll: false,
