@@ -2,10 +2,6 @@ import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import svg from '../images/svg/icons.svg';
 
-const frize = e => {
-  window.scrollTo(0, 0);
-};
-
 const instance = basicLightbox.create(
   `
      <div class="container">
@@ -35,7 +31,7 @@ const instance = basicLightbox.create(
       console.log('onClose', instance);
       document.body.style.position = '';
     },
-  },
+  }
 );
 
 export function success() {
