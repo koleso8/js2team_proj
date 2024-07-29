@@ -73,6 +73,7 @@ export function redAnimation() {
     color: 0xed3b44,
   });
 }
+
 export function yellowAnimation() {
   effect.setOptions({
     color: 0xc6e327,
