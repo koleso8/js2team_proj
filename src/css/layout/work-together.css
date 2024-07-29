@@ -200,3 +200,9 @@ container {
     margin-left: 164px;
   }
 }
+
+.valid {
+  border: 10px solid green;
+}
+.invalid {
+}
