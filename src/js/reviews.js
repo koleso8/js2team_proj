@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
    }
   });
-
   document.addEventListener('keydown', event => {
     if (event.key === 'ArrowRight') {
       swiper.slideNext(1000);
