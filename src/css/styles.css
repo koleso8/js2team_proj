@@ -14,24 +14,3 @@
 @import url('./layout/work-together.css');
 @import url('./layout/modal.css');
 @import url('./base/fonts.css');
-
-.theme-list {
-  display: flex;
-  gap: 15px;
-  position: static;
-  top: 0;
-  left: 45%;
-  width: 100px;
-}
-.theme-item {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
-.section-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
