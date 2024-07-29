@@ -84,7 +84,6 @@
   transition: var(--transition);
 }
 .contact-item.socials a:hover {
-  border: 1px solid var(--text);
   background: radial-gradient(
     circle,
     var(--accent-color) 0%,
@@ -104,7 +103,6 @@
 }
 
 .contact-item.mail a:hover {
-  border: 1px solid var(--text);
   background: radial-gradient(
     circle,
     var(--accent-color) 0%,
