@@ -67,11 +67,13 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--text2);
+  transition: var(--transition);
 }
 .email:hover,
 .email:focus {
   color: var(--text);
   border-bottom: 1px solid var(--text);
+  transition: var(--transition);
 }
 
 .comments {
@@ -95,6 +97,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: var(--transition);
 }
 .comments::placeholder {
   font-family: 'Inter Tight', sans-serif;
@@ -110,6 +113,7 @@
 .comments:focus {
   color: var(--text);
   border-bottom: 1px solid var(--text);
+  transition: var(--transition);
 }
 
 .work-together-button {
@@ -123,10 +127,12 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: var(--text);
+  transition: var(--transition);
 }
 
 .work-together-button:hover {
   background-color: var(--accent-color-hover);
+  transition: var(--transition);
 }
 
 .work-together-nav {
@@ -173,6 +179,7 @@
   border: 1px solid var(--circle);
   border-radius: 60px;
   padding: 10px 12px;
+  transition: var(--transition);
 }
 
 .work-together-address-tel:hover {
