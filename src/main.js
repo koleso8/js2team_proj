@@ -1,4 +1,5 @@
 import './js/API_reviews';
+import './js/change-theme';
 import './js/about-me';
 import './js/covers';
 import './js/faq';
@@ -8,7 +9,6 @@ import './js/reviews';
 import './js/work-together';
 import './js/modal';
 import './js/animation';
-import './js/change-theme';
 import './js/images';
 import './js/benefits';
 import './js/scroll';

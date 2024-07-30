@@ -15,11 +15,48 @@ const bodyEl = document.querySelector('body');
 const chooseThemeBtnEl = document.querySelector('.choose-theme-btn');
 const themeButtonsEl = document.querySelector('.theme-buttons');
 
+const THEME_KEY = 'selectedTheme';
+
+function saveTheme(themeClass) {
+  localStorage.setItem(THEME_KEY, themeClass);
+}
+
+function loadTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme) {
+    changeTheme(savedTheme);
+    applyAnimation(savedTheme);
+  }
+}
+
 function changeTheme(themeClass) {
   bodyEl.classList = '';
   bodyEl.classList.add(themeClass);
   chooseThemeBtnEl.classList.remove('hidden-btn');
   themeButtonsEl.classList.add('hidden-btn');
+  saveTheme(themeClass);
+}
+
+function applyAnimation(themeClass) {
+  switch (themeClass) {
+    case 'red':
+      redAnimation();
+      break;
+    case 'yellow':
+      yellowAnimation();
+      break;
+    case 'orange':
+      orangeAnimation();
+      break;
+    case 'green':
+      greenAnimation();
+      break;
+    case 'blue':
+      blueAnimation();
+      break;
+    default:
+      break;
+  }
 }
 
 buttonRedEl.addEventListener('click', () => {
@@ -51,3 +88,5 @@ chooseThemeBtnEl.addEventListener('click', () => {
   themeButtonsEl.classList.remove('hidden-btn');
   chooseThemeBtnEl.classList.add('hidden-btn');
 });
+
+loadTheme();

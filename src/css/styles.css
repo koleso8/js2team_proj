@@ -3,6 +3,7 @@
 @import url('./base/common.css');
 @import url('./base/container.css');
 
+@import url('./base/theme.css');
 @import url('./layout/about-me.css');
 @import url('./layout/benefits.css');
 @import url('./layout/covers.css');
@@ -14,4 +15,3 @@
 @import url('./layout/work-together.css');
 @import url('./layout/modal.css');
 @import url('./base/fonts.css');
-@import url('./base/theme.css');
