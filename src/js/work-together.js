@@ -19,6 +19,8 @@ formEl.addEventListener('submit', async event => {
     comment: commentsInput,
   };
 
+  localStorage.removeItem(USER_DATA_KEY);
+
   try {
     const result = await createRequest(formData);
 
@@ -29,15 +31,9 @@ formEl.addEventListener('submit', async event => {
     firstInput.classList.remove('valid', 'invalid');
     emailValidMessage.textContent = '';
     createModal(result);
+    event.target.reset();
   } catch (error) {
     showErrorMessage(error);
-  }
-});
-
-inputEl.addEventListener('input', () => {
-  const comment = inputEl.value.slice(0, 150).replace('...', '');
-  if (comment.length >= 150) {
-    inputEl.value = comment + '...';
   }
 });
 
@@ -64,4 +60,37 @@ function showErrorMessage(error) {
     position: 'topRight',
     progressBarColor: '#fafafa',
   });
+}
+const USER_DATA_KEY = 'userFeedback';
+
+const formData = {
+  email: '',
+  comments: '',
+};
+
+formEl.addEventListener('input', e => {
+  formData.email = e.currentTarget.elements.email.value.trim();
+  formData.comments = e.currentTarget.elements.comments.value.trim();
+  saveToLS(USER_DATA_KEY, formData);
+});
+
+document.addEventListener('DOMContentLoaded', e => {
+  const userData = getFromLS(USER_DATA_KEY);
+  formEl.elements.email.value = userData?.email || '';
+  formEl.elements.comments.value = userData?.comments || '';
+});
+
+function saveToLS(key, value) {
+  const json = JSON.stringify(value);
+  localStorage.setItem(key, json);
+}
+
+function getFromLS(key) {
+  const json = localStorage.getItem(key);
+  try {
+    const data = JSON.parse(json);
+    return data;
+  } catch {
+    return json;
+  }
 }
