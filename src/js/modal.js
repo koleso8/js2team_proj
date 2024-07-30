@@ -6,30 +6,34 @@ export function createModal(result) {
   const instance = basicLightbox.create(
     `
      <div class="container">
-     <div class="modal">
-    <h3 class="title-modal">${result.title}</h3>
-    <p class="text-modal">
-      ${result.message}
-    </p>
-    <a href="" class="close"
-      ><svg class="icon" width="22" height="22">
-        <use href="${svg}#close"></use>
-      </svg>
-    </a>
-  </div>
-</div>
+       <div class="modal">
+         <h3 class="title-modal">${result.title}</h3>
+         <p class="text-modal">${result.message}</p>
+         <a href="#" class="close">
+           <svg class="icon" width="22" height="22">
+             <use href="${svg}#close"></use>
+           </svg>
+         </a>
+       </div>
+     </div>
 `,
     {
       onShow: instance => {
-        instance.element().querySelector('a').onclick = instance.close;
+        const closeButton = instance.element().querySelector('a');
+        closeButton.onclick = e => {
+          e.preventDefault();
+          instance.close();
+        };
         document.addEventListener('keydown', e => {
           if (e.code === 'Escape') instance.close();
         });
-        document.body.style.position = 'fixed';
+
+        document.body.style.overflow = 'hidden';
       },
       onClose: instance => {
         console.log('onClose', instance);
-        document.body.style.position = '';
+
+        document.body.style.overflow = '';
       },
     }
   );
