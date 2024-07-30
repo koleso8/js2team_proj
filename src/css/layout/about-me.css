@@ -1,5 +1,5 @@
 .about-me {
-  padding-top: 32px;
+  padding-top: 64px;
   padding-bottom: 32px;
 }
 
@@ -67,7 +67,7 @@
 @media screen and (min-width: 1440px) {
   .about-me {
     padding-bottom: 82px;
-    padding-top: 48px;
+    padding-top: 96px;
   }
 
   .about-wrapper {
