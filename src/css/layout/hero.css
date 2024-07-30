@@ -1,4 +1,13 @@
 /* #region base styles */
+.hero {
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    padding-bottom: 48px;
+  }
+}
 
 .hero-container {
   height: 100vh;
@@ -9,15 +18,8 @@
   z-index: 10;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-container {
-    /* min-height: 1024px; */
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .hero-container {
-    /* min-height: 900px; */
     flex-wrap: wrap;
     align-content: center;
   }
