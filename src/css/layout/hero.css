@@ -1,6 +1,7 @@
 /* #region base styles */
 .hero {
   padding-bottom: 32px;
+  /* add padding */
 }
 
 @media screen and (min-width: 1440px) {
