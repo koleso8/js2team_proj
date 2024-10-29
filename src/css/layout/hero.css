@@ -25,16 +25,10 @@
   color: var(--text);
   text-transform: uppercase;
   align-self: flex-start;
-}
-.hello {
-  animation: slideInFromLeft 2s ease-out forwards;
-}
-.iM {
-  animation: slideInFrom 2s ease-out forwards;
-}
-.loyd {
   animation: fadeIn 2s ease-in-out forwards;
+  animation: toLeft 2s ease-in-out forwards;
 }
+
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 90px;
@@ -257,21 +251,26 @@
   }
 }
 
-@keyframes slideInFromLeft {
+@keyframes toLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes toRight {
   from {
+    opacity: 0;
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
+
 /* #endregion animation */
